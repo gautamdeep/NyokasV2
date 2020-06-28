@@ -21,4 +21,4 @@ def loginpage(request):
 
 '''
     context = {}
-    return render(request, 'useraccount/login.html', context)
+    return render(request, 'signin.html', context)
