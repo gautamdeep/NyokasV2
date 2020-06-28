@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body class="o_web_client" data-gr-c-s-loaded="true" style="">
+
+
+<div class="o_loading" style="display: none;">Loading</div>
+<div class="o_action_manager">
+    <div class="o_action o_view_controller">
+        <div class="o_cp_controller">
+            <div class="o_control_panel">
+                <div>
+                    <ol class="breadcrumb" role="navigation">
+                        <li class="breadcrumb-item d-none d-md-inline-block"><a href="#">Inventory Overview</a></li>
+                        <li class="breadcrumb-item o_back_button" accesskey="b"><a href="#">YourCompany: Receipts</a>
+                        </li>
+                        <li class="breadcrumb-item active">New</li>
+                    </ol>
+                    <div class="o_cp_searchview" role="search"></div>
+                </div>
+                <div>
+                    <div class="o_cp_left">
+                        <div class="o_cp_buttons" role="toolbar" aria-label="Control panel toolbar">
+                            <div>
+                                <div class="o_form_buttons_view o_hidden" role="toolbar" aria-label="Main actions">
+                                    <button type="button" class="btn btn-primary o_form_button_edit" accesskey="a">
+                                        Edit
+                                    </button>
+                                    <button type="button" class="btn btn-secondary o_form_button_create" accesskey="c">
+                                        Create
+                                    </button>
+                                </div>
+                                <div class="o_form_buttons_edit" role="toolbar" aria-label="Main actions"
+                                     data-original-title="" title="">
+                                    <button type="button" class="btn btn-primary o_form_button_save" accesskey="s">
+                                        Save
+                                    </button>
+                                    <button type="button" class="btn btn-secondary o_form_button_cancel" accesskey="j">
+                                        Discard
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="o_cp_sidebar">
+                            <div class="btn-group o_hidden">
+
+                                <div class="btn-group o_dropdown">
+                                    <button class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle"
+                                            data-toggle="dropdown" aria-expanded="false">
+
+                                        Print
+                                    </button>
+
+                                    <div class="dropdown-menu o_dropdown_menu" role="menu">
+
+
+                                        <a class="dropdown-item undefined" role="menuitem" data-section="print"
+                                           data-index="0" href="#">
+                                            Picking Operations
+
+                                        </a>
+
+
+                                        <a class="dropdown-item undefined" role="menuitem" data-section="print"
+                                           data-index="1" href="#">
+                                            Delivery Slip
+
+                                        </a>
+
+
+                                        <a class="dropdown-item undefined" role="menuitem" data-section="print"
+                                           data-index="2" href="#">
+                                            Barcodes (ZPL)
+
+                                        </a>
+
+
+                                        <a class="dropdown-item undefined" role="menuitem" data-section="print"
+                                           data-index="3" href="#">
+                                            Barcodes (PDF)
+
+                                        </a>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="btn-group o_dropdown">
+                                    <button class="o_dropdown_toggler_btn btn btn-secondary dropdown-toggle"
+                                            data-toggle="dropdown" aria-expanded="false">
+
+                                        Action
+                                    </button>
+
+                                    <div class="dropdown-menu o_dropdown_menu" role="menu">
+
+
+                                        <a class="dropdown-item undefined" role="menuitem" data-section="other"
+                                           data-index="0" href="#">
+                                            Delete
+
+                                        </a>
+
+
+                                        <a class="dropdown-item undefined" role="menuitem" data-section="other"
+                                           data-index="1" href="#">
+                                            Duplicate
+
+                                        </a>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="o_cp_right">
+                        <div class="btn-group o_search_options position-static" role="search"></div>
+                        <nav class="o_cp_pager" role="search" aria-label="Pager">
+                            <div class="o_pager o_hidden">
+    <span class="o_pager_counter">
+        <span class="o_pager_value">0</span> / <span class="o_pager_limit">3</span>
+    </span>
+                                <span class="btn-group" aria-atomic="true">
+
+
+
+
+
+        <button type="button" class="fa fa-chevron-left btn btn-secondary o_pager_previous" accesskey="p"
+                aria-label="Previous" title="Previous" tabindex="-1"></button>
+        <button type="button" class="fa fa-chevron-right btn btn-secondary o_pager_next" accesskey="n" aria-label="Next"
+                title="Next" tabindex="-1"></button>
+    </span>
+                            </div>
+                        </nav>
+                        <nav class="btn-group o_cp_switch_buttons" role="toolbar" aria-label="View switcher"></nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="o_content">
+            <div class="o_form_view o_form_editable">
+                <div class="o_form_sheet_bg">
+                    <div class="o_form_statusbar">
+                        <div class="o_statusbar_buttons">
+                            <button type="button" name="action_confirm" class="btn btn-primary o_invisible_modifier">
+                                <span>Mark as Todo</span></button>
+                            <button type="button" name="action_assign" class="btn btn-primary o_invisible_modifier">
+                                <span>Check Availability</span></button>
+                            <button type="button" name="button_validate" class="btn btn-primary"><span>Validate</span>
+                            </button>
+                            <button type="button" name="button_validate"
+                                    class="btn o_btn_validate btn-secondary o_invisible_modifier"><span>Validate</span>
+                            </button>
+                            <button type="button" name="do_print_picking"
+                                    class="btn btn-secondary o_invisible_modifier"><span>Print</span></button>
+                            <button type="button" name="299" class="btn btn-secondary o_invisible_modifier">
+                                <span>Print</span></button>
+                            <button type="button" name="319" class="btn btn-secondary o_invisible_modifier">
+                                <span>Return</span></button>
+                            <button type="button" name="do_unreserve" class="btn btn-secondary o_invisible_modifier">
+                                <span>Unreserve</span></button>
+                            <button type="button" name="button_scrap" class="btn btn-secondary o_invisible_modifier">
+                                <span>Scrap</span></button>
+                            <button type="button" name="action_toggle_is_locked"
+                                    help="If the picking is unlocked you can edit initial demand (for a draft picking) or done quantities (for a done picking)."
+                                    class="btn btn-secondary o_invisible_modifier" data-original-title="" title="">
+                                <span>Unlock</span></button>
+                            <button type="button" name="action_toggle_is_locked"
+                                    class="btn btn-primary o_invisible_modifier"><span>Lock</span></button>
+                            <button type="button" name="action_cancel" class="btn btn-secondary"><span>Cancel</span>
+                            </button>
+                            <button type="button" name="send_to_shipper" class="btn btn-secondary o_invisible_modifier">
+                                <span>Send to Shipper</span></button>
+                            <button type="button" name="print_return_label"
+                                    class="btn btn-secondary o_invisible_modifier"><span>Print Return Label</span>
+                            </button>
+                        </div>
+                        <span class="o_field_integer o_field_number o_field_widget o_invisible_modifier o_readonly_modifier"
+                              name="id"></span>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier"
+                             name="is_locked" data-original-title="" title=""><input type="checkbox"
+                                                                                     id="o_field_input_165"
+                                                                                     class="custom-control-input"><label
+                                for="o_field_input_165" class="custom-control-label">​</label></div>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                             name="show_mark_as_todo" data-original-title="" title=""><input type="checkbox"
+                                                                                             id="checkbox-210"
+                                                                                             class="custom-control-input"
+                                                                                             disabled=""><label
+                                for="o_field_input_166" class="custom-control-label">​</label></div>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                             name="show_check_availability" data-original-title="" title=""><input type="checkbox"
+                                                                                                   id="checkbox-211"
+                                                                                                   class="custom-control-input"
+                                                                                                   disabled=""><label
+                                for="o_field_input_167" class="custom-control-label">​</label></div>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                             name="show_validate" data-original-title="" title=""><input type="checkbox"
+                                                                                         id="checkbox-212"
+                                                                                         class="custom-control-input"
+                                                                                         disabled=""><label
+                                for="o_field_input_168" class="custom-control-label">​</label></div>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                             name="show_lots_text"><input type="checkbox" id="checkbox-213" class="custom-control-input"
+                                                          disabled=""><label for="o_field_input_169"
+                                                                             class="custom-control-label">​</label>
+                        </div>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier"
+                             name="immediate_transfer"><input type="checkbox" id="o_field_input_170"
+                                                              class="custom-control-input"><label
+                                for="o_field_input_170" class="custom-control-label">​</label></div>
+                        <span name="picking_type_code" class="o_field_widget o_invisible_modifier o_readonly_modifier">Receipt</span>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                             name="show_operations"><input type="checkbox" id="checkbox-215"
+                                                           class="custom-control-input" disabled=""><label
+                                for="o_field_input_171" class="custom-control-label">​</label></div>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                             name="show_reserved" data-original-title="" title=""><input type="checkbox"
+                                                                                         id="checkbox-216"
+                                                                                         class="custom-control-input"
+                                                                                         disabled=""><label
+                                for="o_field_input_172" class="custom-control-label">​</label></div>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                             name="move_line_exist" data-original-title="" title=""><input type="checkbox"
+                                                                                           id="checkbox-217"
+                                                                                           class="custom-control-input"
+                                                                                           disabled=""><label
+                                for="o_field_input_173" class="custom-control-label">​</label></div>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                             name="has_packages" data-original-title="" title=""><input type="checkbox"
+                                                                                        id="checkbox-218"
+                                                                                        class="custom-control-input"
+                                                                                        disabled=""><label
+                                for="o_field_input_174" class="custom-control-label">​</label></div>
+                        <div class="o_statusbar_status o_field_widget o_readonly_modifier" name="state"
+                             data-original-title="" title="">
+
+
+                            <button type="button" data-value="done" disabled="disabled" title="Not active state"
+                                    aria-pressed="false" class="btn o_arrow_button btn-secondary disabled ">
+                                Done
+                            </button>
+
+
+                            <button type="button" data-value="assigned" disabled="disabled" title="Not active state"
+                                    aria-pressed="false" class="btn o_arrow_button btn-secondary disabled ">
+                                Ready
+                            </button>
+
+
+                            <button type="button" data-value="confirmed" disabled="disabled" title="Not active state"
+                                    aria-pressed="false" class="btn o_arrow_button btn-secondary disabled ">
+                                Waiting
+                            </button>
+
+
+                            <button type="button" data-value="draft" disabled="disabled" title="Current state"
+                                    aria-pressed="true" class="btn o_arrow_button btn-primary disabled "
+                                    aria-current="step">
+                                Draft
+                            </button>
+
+
+                        </div>
+                        <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                             name="picking_type_entire_packs" data-original-title="" title=""><input type="checkbox"
+                                                                                                     id="checkbox-219"
+                                                                                                     class="custom-control-input"
+                                                                                                     disabled=""><label
+                                for="o_field_input_176" class="custom-control-label">​</label></div>
+                    </div>
+                    <div class="clearfix position-relative o_form_sheet">
+                        <div class="o_not_full oe_button_box">
+                            <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                                 name="has_scrap_move"><input type="checkbox" id="checkbox-220"
+                                                              class="custom-control-input" disabled=""><label
+                                    for="o_field_input_177" class="custom-control-label">​</label></div>
+                            <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                                 name="has_tracking"><input type="checkbox" id="checkbox-221"
+                                                            class="custom-control-input" disabled=""><label
+                                    for="o_field_input_178" class="custom-control-label">​</label></div>
+                            <button type="button" name="action_see_move_scrap"
+                                    class="btn oe_stat_button o_invisible_modifier"><i
+                                    class="fa fa-fw o_button_icon fa-arrows-v"></i><span>Scraps</span></button>
+                            <button type="button" name="action_see_packages"
+                                    class="btn oe_stat_button o_invisible_modifier"><i
+                                    class="fa fa-fw o_button_icon fa-cubes"></i><span>Packages</span></button>
+                            <button type="button" name="295" class="btn oe_stat_button o_invisible_modifier"><i
+                                    class="fa fa-fw o_button_icon fa-arrow-up"></i><span>Traceability</span></button>
+                            <button type="button" name="action_picking_move_tree"
+                                    class="btn oe_stat_button o_invisible_modifier" help="List view of operations"
+                                    context="{'picking_type_code': picking_type_code, 'default_picking_id': id, 'form_view_ref':'stock.view_move_form', 'address_in_id': partner_id, 'default_picking_type_id': picking_type_id, 'default_location_id': location_id, 'default_location_dest_id': location_dest_id}"
+                                    invisible="1" data-original-title="" title=""><i
+                                    class="fa fa-fw o_button_icon fa-arrows-v"></i>
+                                <div class="o_form_field o_stat_info"><span class="o_stat_text">Operations</span></div>
+                            </button>
+                            <button type="button" name="action_view_stock_valuation_layers"
+                                    class="btn oe_stat_button o_invisible_modifier" invisible="1"><i
+                                    class="fa fa-fw o_button_icon fa-dollar"></i><span>Valuation</span></button>
+                            <button type="button" name="open_website_url"
+                                    class="btn oe_stat_button o_invisible_modifier"><i
+                                    class="fa fa-fw o_button_icon fa-truck"></i><span>Tracking</span></button>
+                        </div>
+                        <h1 class="d-none d-md-block"><span
+                                class="o_field_char o_field_widget o_invisible_modifier o_readonly_modifier"
+                                name="name">/</span></h1>
+                        <div class="o_group">
+                            <table class="o_group o_inner_group o_group_col_6">
+                                <tbody>
+                                <tr>
+                                    <td class="o_td_label">
+                                        <div class=""><label class="o_form_label o_invisible_modifier"
+                                                             for="o_field_input_122" style="font-weight:bold;">Delivery
+                                            Address</label><label class="o_form_label" for="o_field_input_122"
+                                                                  style="font-weight:bold;">Receive From</label><label
+                                                class="o_form_label o_invisible_modifier" for="o_field_input_122"
+                                                style="font-weight:bold;">Contact</label></div>
+                                    </td>
+                                    <td style="width: 100%;">
+                                        <div class="o_field_widget o_field_many2one" aria-atomic="true"
+                                             name="partner_id">
+                                            <div class="o_input_dropdown">
+                                                <input type="text" class="o_input ui-autocomplete-input"
+                                                       autocomplete="off" id="o_field_input_122">
+                                                <a role="button" class="o_dropdown_button" draggable="false"></a>
+                                            </div>
+                                            <button type="button"
+                                                    class="fa fa-external-link btn btn-secondary o_external_button"
+                                                    tabindex="-1" draggable="false" aria-label="External link"
+                                                    title="External link" style="display: none;"></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="o_td_label"><label class="o_form_label o_required_modifier"
+                                                                  for="o_field_input_123">Operation Type</label></td>
+                                    <td style="width: 100%;">
+                                        <div class="o_field_widget o_field_many2one o_with_button o_required_modifier"
+                                             aria-atomic="true" name="picking_type_id">
+                                            <div class="o_input_dropdown">
+                                                <input type="text" class="o_input ui-autocomplete-input"
+                                                       autocomplete="off" id="o_field_input_123">
+                                                <a role="button" class="o_dropdown_button" draggable="false"></a>
+                                            </div>
+                                            <button type="button"
+                                                    class="fa fa-external-link btn btn-secondary o_external_button"
+                                                    tabindex="-1" draggable="false" aria-label="External link"
+                                                    title="External link"></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="o_td_label"><label
+                                            class="o_form_label o_invisible_modifier o_required_modifier"
+                                            for="o_field_input_124">Source Location</label></td>
+                                    <td style="width: 100%;">
+                                        <div class="o_field_widget o_field_many2one o_with_button o_invisible_modifier o_required_modifier"
+                                             aria-atomic="true" name="location_id">
+                                            <div class="o_input_dropdown">
+                                                <input type="text" class="o_input ui-autocomplete-input"
+                                                       autocomplete="off" id="o_field_input_124">
+                                                <a role="button" class="o_dropdown_button" draggable="false"></a>
+                                            </div>
+                                            <button type="button"
+                                                    class="fa fa-external-link btn btn-secondary o_external_button"
+                                                    tabindex="-1" draggable="false" aria-label="External link"
+                                                    title="External link"></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="o_td_label"><label
+                                            class="o_form_label o_invisible_modifier o_required_modifier"
+                                            for="o_field_input_125">Destination Location</label></td>
+                                    <td style="width: 100%;">
+                                        <div class="o_field_widget o_field_many2one o_with_button o_invisible_modifier o_required_modifier"
+                                             aria-atomic="true" name="location_dest_id">
+                                            <div class="o_input_dropdown">
+                                                <input type="text" class="o_input ui-autocomplete-input"
+                                                       autocomplete="off" id="o_field_input_125">
+                                                <a role="button" class="o_dropdown_button" draggable="false"></a>
+                                            </div>
+                                            <button type="button"
+                                                    class="fa fa-external-link btn btn-secondary o_external_button"
+                                                    tabindex="-1" draggable="false" aria-label="External link"
+                                                    title="External link"></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="o_td_label"><label
+                                            class="o_form_label o_invisible_modifier o_readonly_modifier"
+                                            for="o_field_input_126" data-original-title="" title="">Back Order
+                                        of</label></td>
+                                    <td style="width: 100%;"><a
+                                            class="o_form_uri o_field_widget o_invisible_modifier o_readonly_modifier"
+                                            href="#" name="backorder_id" id="o_field_input_126"><span></span></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table class="o_group o_inner_group o_group_col_6">
+                                <tbody>
+                                <tr>
+                                    <td class="o_td_label"><label class="o_form_label" for="o_field_input_127"
+                                                                  data-original-title="" title="">Scheduled Date</label>
+                                    </td>
+                                    <td style="width: 100%;">
+                                        <div class="o_datepicker o_field_date o_field_widget" aria-atomic="true"
+                                             id="datepicker222" data-target-input="nearest" name="scheduled_date">
+                                            <input type="text" class="o_datepicker_input o_input datetimepicker-input"
+                                                   name="scheduled_date" data-target="#datepicker222" placeholder=""
+                                                   id="o_field_input_127">
+                                            <span class="o_datepicker_button"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="o_td_label"><label
+                                            class="o_form_label o_invisible_modifier o_readonly_modifier"
+                                            for="o_field_input_128" data-original-title="" title="">Effective
+                                        Date</label></td>
+                                    <td style="width: 100%;"><span
+                                            class="o_field_date o_field_widget o_invisible_modifier o_readonly_modifier"
+                                            name="date_done"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="o_td_label"><label class="o_form_label" for="o_field_input_129"
+                                                                  data-original-title="" title="">Source
+                                        Document</label></td>
+                                    <td style="width: 100%;"><input class="o_field_char o_field_widget o_input"
+                                                                    name="origin" placeholder="e.g. PO0032" type="text"
+                                                                    id="o_field_input_129"></td>
+                                </tr>
+                                <tr>
+                                    <td class="o_td_label"><label class="o_form_label o_invisible_modifier"
+                                                                  for="o_field_input_130" data-original-title=""
+                                                                  title="">Assign Owner</label></td>
+                                    <td style="width: 100%;">
+                                        <div class="o_field_widget o_field_many2one o_invisible_modifier"
+                                             aria-atomic="true" name="owner_id">
+                                            <div class="o_input_dropdown">
+                                                <input type="text" class="o_input ui-autocomplete-input"
+                                                       autocomplete="off" id="o_field_input_130">
+                                                <a role="button" class="o_dropdown_button" draggable="false"></a>
+                                            </div>
+                                            <button type="button"
+                                                    class="fa fa-external-link btn btn-secondary o_external_button"
+                                                    tabindex="-1" draggable="false" aria-label="External link"
+                                                    title="External link" style="display: none;"></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="o_notebook">
+                            <div class="o_notebook_headers">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item o_invisible_modifier"><a data-toggle="tab" disable_anchor="true"
+                                                                                 href="#notebook_page_204"
+                                                                                 class="nav-link" role="tab">Detailed
+                                        Operations</a></li>
+                                    <li class="nav-item o_invisible_modifier"><a data-toggle="tab" disable_anchor="true"
+                                                                                 href="#notebook_page_205"
+                                                                                 class="nav-link" role="tab">Detailed
+                                        Operations</a></li>
+                                    <li class="nav-item"><a data-toggle="tab" disable_anchor="true"
+                                                            href="#notebook_page_206" class="nav-link active"
+                                                            role="tab">Operations</a></li>
+                                    <li class="nav-item"><a data-toggle="tab" disable_anchor="true"
+                                                            href="#notebook_page_207" class="nav-link" role="tab">Additional
+                                        Info</a></li>
+                                    <li class="nav-item"><a data-toggle="tab" disable_anchor="true"
+                                                            href="#notebook_page_208" class="nav-link"
+                                                            role="tab">Note</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane" id="notebook_page_204">
+                                    <div class="o_field_one2many o_field_widget o_field_x2many o_field_x2many_list o_readonly_modifier"
+                                         name="move_line_nosuggest_ids" id="o_field_input_184">
+                                        <div class="o_cp_controller">
+                                            <div class="o_x2m_control_panel">
+                                                <nav class="o_cp_buttons" aria-label="Control panel toolbar"
+                                                     role="toolbar"></nav>
+                                                <nav class="o_cp_pager" aria-label="Pager" role="toolbar">
+                                                    <div class="o_pager o_hidden">
+    <span class="o_pager_counter">
+        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
+    </span>
+                                                        <span class="btn-group" aria-atomic="true">
+
+
+        <button type="button" class="fa fa-chevron-left btn btn-secondary o_pager_previous" aria-label="Previous"
+                title="Previous" tabindex="-1"></button>
+        <button type="button" class="fa fa-chevron-right btn btn-secondary o_pager_next" aria-label="Next" title="Next"
+                tabindex="-1"></button>
+    </span>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <div class="o_list_view">
+                                            <div class="table-responsive">
+                                                <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped o_empty_list">
+                                                    <thead>
+                                                    <tr>
+                                                        <th data-name="product_id" tabindex="-1"
+                                                            class="o_column_sortable" title="Product">Product
+                                                        </th>
+                                                        <th data-name="lot_id" tabindex="-1" class="o_column_sortable"
+                                                            title="Lot/Serial Number">Lot/Serial Number
+                                                        </th>
+                                                        <th data-name="qty_done" tabindex="-1"
+                                                            class="o_column_sortable o_list_number_th" title="Done">Done
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="ui-sortable">
+                                                    <tr>
+                                                        <td colspan="3">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3">&nbsp;</td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_field_one2many o_field_widget o_field_x2many o_field_x2many_list o_invisible_modifier"
+                                         name="package_level_ids_details" id="o_field_input_185">
+                                        <div class="o_cp_controller">
+                                            <div class="o_x2m_control_panel">
+                                                <nav class="o_cp_buttons" aria-label="Control panel toolbar"
+                                                     role="toolbar"></nav>
+                                                <nav class="o_cp_pager" aria-label="Pager" role="toolbar">
+                                                    <div class="o_pager o_hidden">
+    <span class="o_pager_counter">
+        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
+    </span>
+                                                        <span class="btn-group" aria-atomic="true">
+
+
+        <button type="button" class="fa fa-chevron-left btn btn-secondary o_pager_previous" aria-label="Previous"
+                title="Previous" tabindex="-1"></button>
+        <button type="button" class="fa fa-chevron-right btn btn-secondary o_pager_next" aria-label="Next" title="Next"
+                tabindex="-1"></button>
+    </span>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <div class="o_list_view">
+                                            <div class="table-responsive">
+                                                <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped o_empty_list">
+                                                    <thead>
+                                                    <tr>
+                                                        <th data-name="package_id" tabindex="-1"
+                                                            class="o_column_sortable" title="Package">Package
+                                                        </th>
+                                                        <th data-name="state" tabindex="-1" title="State">State</th>
+                                                        <th data-name="is_done" tabindex="-1" title="Done">Done</th>
+                                                        <th data-name="action_show_package_details"></th>
+                                                        <th class="o_list_record_remove_header"></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="ui-sortable">
+                                                    <tr>
+                                                        <td colspan="5" class="o_field_x2many_list_row_add"><a href="#"
+                                                                                                               role="button">Add
+                                                            a line</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary o_invisible_modifier"
+                                            name="put_in_pack" invisible="1"><span>Put in Pack</span></button>
+                                </div>
+                                <div class="tab-pane" id="notebook_page_205">
+                                    <div class="o_field_one2many o_field_widget o_field_x2many o_field_x2many_list o_readonly_modifier"
+                                         name="move_line_ids_without_package" id="o_field_input_186">
+                                        <div class="o_cp_controller">
+                                            <div class="o_x2m_control_panel">
+                                                <nav class="o_cp_buttons" aria-label="Control panel toolbar"
+                                                     role="toolbar"></nav>
+                                                <nav class="o_cp_pager" aria-label="Pager" role="toolbar">
+                                                    <div class="o_pager o_hidden">
+    <span class="o_pager_counter">
+        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
+    </span>
+                                                        <span class="btn-group" aria-atomic="true">
+
+
+        <button type="button" class="fa fa-chevron-left btn btn-secondary o_pager_previous" aria-label="Previous"
+                title="Previous" tabindex="-1"></button>
+        <button type="button" class="fa fa-chevron-right btn btn-secondary o_pager_next" aria-label="Next" title="Next"
+                tabindex="-1"></button>
+    </span>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <div class="o_list_view">
+                                            <div class="table-responsive">
+                                                <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped o_empty_list">
+                                                    <thead>
+                                                    <tr>
+                                                        <th data-name="product_id" tabindex="-1"
+                                                            class="o_column_sortable" title="Product">Product
+                                                        </th>
+                                                        <th data-name="lot_id" tabindex="-1" class="o_column_sortable"
+                                                            title="Lot/Serial Number">Lot/Serial Number
+                                                        </th>
+                                                        <th data-name="qty_done" tabindex="-1"
+                                                            class="o_column_sortable o_list_number_th" title="Done">Done
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="ui-sortable">
+                                                    <tr>
+                                                        <td colspan="3">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3">&nbsp;</td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o_field_one2many o_field_widget o_field_x2many o_field_x2many_list o_invisible_modifier"
+                                         name="package_level_ids_details" id="o_field_input_185">
+                                        <div class="o_cp_controller">
+                                            <div class="o_x2m_control_panel">
+                                                <nav class="o_cp_buttons" aria-label="Control panel toolbar"
+                                                     role="toolbar"></nav>
+                                                <nav class="o_cp_pager" aria-label="Pager" role="toolbar">
+                                                    <div class="o_pager o_hidden">
+    <span class="o_pager_counter">
+        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
+    </span>
+                                                        <span class="btn-group" aria-atomic="true">
+
+
+        <button type="button" class="fa fa-chevron-left btn btn-secondary o_pager_previous" aria-label="Previous"
+                title="Previous" tabindex="-1"></button>
+        <button type="button" class="fa fa-chevron-right btn btn-secondary o_pager_next" aria-label="Next" title="Next"
+                tabindex="-1"></button>
+    </span>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <div class="o_list_view">
+                                            <div class="table-responsive">
+                                                <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped o_empty_list">
+                                                    <thead>
+                                                    <tr>
+                                                        <th data-name="package_id" tabindex="-1"
+                                                            class="o_column_sortable" title="Package">Package
+                                                        </th>
+                                                        <th data-name="state" tabindex="-1" title="State">State</th>
+                                                        <th data-name="is_done" tabindex="-1" title="Done">Done</th>
+                                                        <th data-name="action_show_package_details"></th>
+                                                        <th class="o_list_record_remove_header"></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="ui-sortable">
+                                                    <tr>
+                                                        <td colspan="5" class="o_field_x2many_list_row_add"><a href="#"
+                                                                                                               role="button">Add
+                                                            a line</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary o_invisible_modifier"
+                                            name="put_in_pack" invisible="1"><span>Put in Pack</span></button>
+                                </div>
+                                <div class="tab-pane active" id="notebook_page_206">
+                                    <div class="o_field_one2many o_field_widget o_field_x2many o_field_x2many_list"
+                                         name="move_ids_without_package" id="o_field_input_187">
+                                        <div class="o_cp_controller">
+                                            <div class="o_x2m_control_panel">
+                                                <nav class="o_cp_buttons" aria-label="Control panel toolbar"
+                                                     role="toolbar"></nav>
+                                                <nav class="o_cp_pager" aria-label="Pager" role="toolbar">
+                                                    <div class="o_pager o_hidden">
+    <span class="o_pager_counter">
+        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
+    </span>
+                                                        <span class="btn-group" aria-atomic="true">
+
+
+        <button type="button" class="fa fa-chevron-left btn btn-secondary o_pager_previous" aria-label="Previous"
+                title="Previous" tabindex="-1"></button>
+        <button type="button" class="fa fa-chevron-right btn btn-secondary o_pager_next" aria-label="Next" title="Next"
+                tabindex="-1"></button>
+    </span>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <div class="o_list_view o_list_optional_columns">
+                                            <div class="table-responsive">
+                                                <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped"
+                                                       style="table-layout: fixed;">
+                                                    <thead>
+                                                    <tr>
+                                                        <th data-name="product_id" tabindex="-1"
+                                                            class="o_column_sortable" title="Product"
+                                                            style="width: 719px;">Product<span class="o_resize"></span>
+                                                        </th>
+                                                        <th data-name="quantity_done" tabindex="-1"
+                                                            class="o_list_number_th" title="Done"
+                                                            style="min-width: 92px; width: 317px;">Done<span
+                                                                class="o_resize"></span></th>
+                                                        <th data-name="action_show_details" style="width: 28px;"></th>
+                                                        <th data-name="action_assign_serial" style="width: 28px;"></th>
+                                                        <th class="o_list_record_remove_header"
+                                                            style="width: 46px;"></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="ui-sortable">
+                                                    <tr class="o_data_row o_selected_row" data-id="stock.move_247">
+                                                        <td class="o_data_cell o_field_cell o_list_many2one o_required_modifier"
+                                                            tabindex="-1" title="">
+                                                            <div class="o_field_widget o_field_many2one o_required_modifier"
+                                                                 aria-atomic="true" name="product_id">
+                                                                <div class="o_input_dropdown">
+                                                                    <input type="text"
+                                                                           class="o_input ui-autocomplete-input"
+                                                                           autocomplete="off">
+                                                                    <a role="button" class="o_dropdown_button"
+                                                                       draggable="false"></a>
+                                                                </div>
+                                                                <button type="button"
+                                                                        class="fa fa-external-link btn btn-secondary o_external_button"
+                                                                        tabindex="-1" draggable="false"
+                                                                        aria-label="External link" title="External link"
+                                                                        style="display: none;"></button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="o_data_cell o_field_cell o_list_number o_readonly_modifier"
+                                                            tabindex="-1" title="0.000"><span
+                                                                class="o_field_float o_field_number o_field_widget o_readonly_modifier"
+                                                                name="quantity_done">0.000</span></td>
+                                                        <td class="o_data_cell o_list_button o_invisible_modifier"
+                                                            tabindex="-1">
+                                                            <button type="button" name="action_show_details"
+                                                                    class="btn o_icon_button o_invisible_modifier"
+                                                                    title="Register lots, packs, location"><i
+                                                                    class="fa fa-fw o_button_icon fa-list"></i></button>
+                                                        </td>
+                                                        <td class="o_data_cell o_list_button o_invisible_modifier"
+                                                            tabindex="-1">
+                                                            <button type="button" name="action_assign_serial" role="img"
+                                                                    title="Assign Serial Numbers"
+                                                                    class="btn o_icon_button o_invisible_modifier"
+                                                                    disabled=""><i
+                                                                    class="fa fa-fw o_button_icon fa-plus-square"></i>
+                                                            </button>
+                                                        </td>
+                                                        <td class="o_list_record_remove">
+                                                            <button class="fa fa-trash-o" name="delete"
+                                                                    aria-label="Delete row 1"></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5" class="o_field_x2many_list_row_add"><a href="#"
+                                                                                                               role="button">Add
+                                                            a line</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    </tfoot>
+                                                    <i class="o_optional_columns_dropdown_toggle fa fa-ellipsis-v"></i>
+                                                </table>
+                                            </div>
+                                            <div class="o_optional_columns text-center dropdown"><a
+                                                    class="dropdown-toggle text-dark o-no-caret" href="#" role="button"
+                                                    data-toggle="dropdown" aria-expanded="false"></a>
+                                                <div class="dropdown-menu o_optional_columns_dropdown dropdown-menu-right"
+                                                     role="menu">
+                                                    <div class="dropdown-item">
+                                                        <div class="custom-control custom-checkbox"><input
+                                                                type="checkbox" id="checkbox-252"
+                                                                class="custom-control-input" name="description_picking"><label
+                                                                for="checkbox-252" class="custom-control-label">Description</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-item">
+                                                        <div class="custom-control custom-checkbox"><input
+                                                                type="checkbox" id="checkbox-253"
+                                                                class="custom-control-input" name="date_expected"><label
+                                                                for="checkbox-253" class="custom-control-label">Expected
+                                                            Date</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="o_field_integer o_field_number o_field_widget o_invisible_modifier o_readonly_modifier"
+                                          name="id"></span>
+                                    <div class="o_field_one2many o_field_widget o_field_x2many o_field_x2many_list o_invisible_modifier"
+                                         name="package_level_ids" id="o_field_input_188">
+                                        <div class="o_cp_controller">
+                                            <div class="o_x2m_control_panel">
+                                                <nav class="o_cp_buttons" aria-label="Control panel toolbar"
+                                                     role="toolbar"></nav>
+                                                <nav class="o_cp_pager" aria-label="Pager" role="toolbar">
+                                                    <div class="o_pager o_hidden">
+    <span class="o_pager_counter">
+        <span class="o_pager_value"></span> / <span class="o_pager_limit"></span>
+    </span>
+                                                        <span class="btn-group" aria-atomic="true">
+
+
+        <button type="button" class="fa fa-chevron-left btn btn-secondary o_pager_previous" aria-label="Previous"
+                title="Previous" tabindex="-1"></button>
+        <button type="button" class="fa fa-chevron-right btn btn-secondary o_pager_next" aria-label="Next" title="Next"
+                tabindex="-1"></button>
+    </span>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <div class="o_list_view">
+                                            <div class="table-responsive">
+                                                <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped o_empty_list">
+                                                    <thead>
+                                                    <tr>
+                                                        <th data-name="package_id" tabindex="-1"
+                                                            class="o_column_sortable" title="Package">Package
+                                                        </th>
+                                                        <th data-name="state" tabindex="-1" title="State">State</th>
+                                                        <th data-name="is_done" tabindex="-1" title="Done">Done</th>
+                                                        <th data-name="action_show_package_details"></th>
+                                                        <th class="o_list_record_remove_header"></th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="ui-sortable">
+                                                    <tr>
+                                                        <td colspan="5" class="o_field_x2many_list_row_add"><a href="#"
+                                                                                                               role="button">Add
+                                                            a line</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">&nbsp;</td>
+                                                    </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary o_invisible_modifier"
+                                            name="put_in_pack" invisible="1"><span>Put in Pack</span></button>
+                                </div>
+                                <div class="tab-pane" id="notebook_page_207">
+                                    <div class="o_group">
+                                        <table class="o_group o_inner_group o_group_col_6">
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="2" style="width: 100%;">
+                                                    <div class="o_horizontal_separator">Shipping Information</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label
+                                                        class="o_form_label o_invisible_modifier o_readonly_modifier"
+                                                        for="o_field_input_135">Is Return Picking</label></td>
+                                                <td style="width: 100%;">
+                                                    <div class="o_field_boolean o_field_widget custom-control custom-checkbox o_invisible_modifier o_readonly_modifier"
+                                                         name="is_return_picking"><input type="checkbox"
+                                                                                         id="checkbox-223"
+                                                                                         class="custom-control-input"
+                                                                                         disabled=""><label
+                                                            for="o_field_input_135"
+                                                            class="custom-control-label">​</label></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label class="o_form_label"
+                                                                              for="o_field_input_136">Carrier</label>
+                                                </td>
+                                                <td style="width: 100%;">
+                                                    <div class="o_field_widget o_field_many2one" aria-atomic="true"
+                                                         name="carrier_id">
+                                                        <div class="o_input_dropdown">
+                                                            <input type="text" class="o_input ui-autocomplete-input"
+                                                                   autocomplete="off" id="o_field_input_136">
+                                                            <a role="button" class="o_dropdown_button"
+                                                               draggable="false"></a>
+                                                        </div>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label
+                                                        class="o_form_label o_invisible_modifier o_readonly_modifier"
+                                                        for="o_field_input_137">Provider</label></td>
+                                                <td style="width: 100%;"><span name="delivery_type"
+                                                                               class="o_field_widget o_invisible_modifier o_readonly_modifier"></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label class="o_form_label"
+                                                                              for="o_field_input_138">Tracking
+                                                    Reference</label></td>
+                                                <td style="width: 100%;">
+                                                    <div name="tracking"><input
+                                                            class="o_field_char o_field_widget o_input oe_inline"
+                                                            name="carrier_tracking_ref" placeholder="" type="text"
+                                                            id="o_field_input_138">
+                                                        <button type="button"
+                                                                class="btn fa fa-arrow-right btn-link o_invisible_modifier"
+                                                                name="cancel_shipment"><span>Cancel</span></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label class="o_form_label"
+                                                                              for="o_field_input_139"
+                                                                              data-original-title=""
+                                                                              title="">Weight</label></td>
+                                                <td style="width: 100%;">
+                                                    <div><span
+                                                            class="o_field_float o_field_number o_field_widget o_readonly_modifier oe_inline"
+                                                            name="weight">0.00</span><span
+                                                            class="o_field_char o_field_widget o_readonly_modifier oe_inline"
+                                                            name="weight_uom_name" style="margin-left:5px">kg</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label class="o_form_label"
+                                                                              for="o_field_input_140"
+                                                                              data-original-title="" title="">Weight for
+                                                    shipping</label></td>
+                                                <td style="width: 100%;">
+                                                    <div><span
+                                                            class="o_field_float o_field_number o_field_widget o_readonly_modifier oe_inline"
+                                                            name="shipping_weight">0.00</span><span
+                                                            class="o_field_char o_field_widget o_readonly_modifier oe_inline"
+                                                            name="weight_uom_name" style="margin-left:5px">kg</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="o_group o_inner_group o_group_col_6">
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="2" style="width: 100%;">
+                                                    <div class="o_horizontal_separator">Other Information</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label
+                                                        class="o_form_label o_invisible_modifier o_readonly_modifier"
+                                                        for="o_field_input_141">Type of Operation</label></td>
+                                                <td style="width: 100%;"><span name="picking_type_code"
+                                                                               class="o_field_widget o_invisible_modifier o_readonly_modifier">Receipt</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label
+                                                        class="o_form_label o_invisible_modifier o_required_modifier"
+                                                        for="o_field_input_142" data-original-title="" title="">Shipping
+                                                    Policy</label></td>
+                                                <td style="width: 100%;"><select
+                                                        class="o_input o_field_widget o_invisible_modifier o_required_modifier"
+                                                        name="move_type" id="o_field_input_142">
+                                                    <option value="false" style="display: none"></option>
+                                                    <option value="&quot;direct&quot;" style="">As soon as possible
+                                                    </option>
+                                                    <option value="&quot;one&quot;" style="">When all products are
+                                                        ready
+                                                    </option>
+                                                </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label class="o_form_label"
+                                                                              for="o_field_input_143"
+                                                                              data-original-title=""
+                                                                              title="">Priority</label></td>
+                                                <td style="width: 100%;">
+                                                    <div class="o_priority o_field_widget" name="priority"><a href="#"
+                                                                                                              title="Normal"
+                                                                                                              aria-label="Normal"
+                                                                                                              data-index="1"
+                                                                                                              class="o_priority_star fa fa-star-o"></a><a
+                                                            href="#" title="Urgent" aria-label="Urgent" data-index="2"
+                                                            class="o_priority_star fa fa-star-o"></a><a href="#"
+                                                                                                        title="Very Urgent"
+                                                                                                        aria-label="Very Urgent"
+                                                                                                        data-index="3"
+                                                                                                        class="o_priority_star fa fa-star-o"></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label class="o_form_label"
+                                                                              for="o_field_input_144">Responsible</label>
+                                                </td>
+                                                <td style="width: 100%;">
+                                                    <div class="o_field_widget o_field_many2one o_with_button"
+                                                         aria-atomic="true" name="user_id">
+                                                        <div class="o_input_dropdown">
+                                                            <input type="text" class="o_input ui-autocomplete-input"
+                                                                   autocomplete="off" id="o_field_input_144">
+                                                            <a role="button" class="o_dropdown_button"
+                                                               draggable="false"></a>
+                                                        </div>
+                                                        <button type="button"
+                                                                class="fa fa-external-link btn btn-secondary o_external_button"
+                                                                tabindex="-1" draggable="false"
+                                                                aria-label="External link"
+                                                                title="External link"></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label
+                                                        class="o_form_label o_invisible_modifier o_readonly_modifier"
+                                                        for="o_field_input_145">Procurement Group</label></td>
+                                                <td style="width: 100%;"><a
+                                                        class="o_form_uri o_field_widget o_invisible_modifier o_readonly_modifier"
+                                                        href="#" name="group_id"
+                                                        id="o_field_input_145"><span></span></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label
+                                                        class="o_form_label o_invisible_modifier o_readonly_modifier"
+                                                        for="o_field_input_146" data-original-title=""
+                                                        title="">Website</label></td>
+                                                <td style="width: 100%;"><a
+                                                        class="o_form_uri o_field_widget o_invisible_modifier o_readonly_modifier"
+                                                        href="#" name="website_id" id="o_field_input_146"><span></span></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="o_td_label"><label class="o_form_label o_readonly_modifier"
+                                                                              for="o_field_input_147">Company</label>
+                                                </td>
+                                                <td style="width: 100%;"><a
+                                                        class="o_form_uri o_field_widget o_readonly_modifier"
+                                                        href="#id=1&amp;model=res.company" name="company_id"
+                                                        id="o_field_input_147"><span>Demo Company</span></a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="notebook_page_208"><textarea
+                                        class="o_field_text o_field_widget o_input"
+                                        style="overflow-y: hidden; height: 50px; resize: none;" name="note"
+                                        placeholder="Add an internal note that will be printed on the Picking Operations sheet"
+                                        type="text" id="o_field_input_181"></textarea><textarea disabled=""
+                                                                                                style="position: absolute; opacity: 0; height: 10px; border-top-width: 0px; border-bottom-width: 0px; padding: 0px; overflow: hidden; top: -10000px; left: -10000px; width: 2px;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="o_chatter oe_chatter" style="height: auto;">
+                    <div class="o_chatter_topbar">
+                        <button type="button" class="btn btn-link o_chatter_button_new_message" title="Send a message"
+                                disabled="">
+                            Send message
+                        </button>
+                        <button class="btn btn-link o_chatter_button_log_note"
+                                title="Log a note. Followers will not be notified." disabled="">
+                            Log note
+                        </button>
+                        <button class="btn btn-link o_chatter_button_schedule_activity"
+                                title="Log or schedule an activity" disabled="">
+                            <i class="fa fa-clock-o" role="img" aria-label="Dates" title="Dates"></i> Schedule activity
+                        </button>
+
+
+                        <div class="o_followers btn-group o_field_widget" name="message_follower_ids">
+                            <div class="o_followers_title_box btn-group">
+                                <button class="btn btn-link" title="No follower" data-toggle="dropdown"
+                                        aria-expanded="false" disabled="">
+                                    <i class="fa fa-user" role="img" aria-label="Dropdown menu - Followers"></i>
+                                    <span class="o_followers_count">0</span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right o_followers_list" role="menu"><a href="#"
+                                                                                                               role="menuitem"
+                                                                                                               class="dropdown-item o_add_follower">Add
+                                    Followers</a>
+                                    <a href="#" role="menuitem" class="dropdown-item o_add_follower_channel">Add
+                                        Channels</a></div>
+                            </div>
+                            <div class="o_followers_actions btn-group">
+                                <button class="btn btn-link o_followers_follow_button o_followers_notfollow"
+                                        disabled="">
+                                    <span class="o_follow">Follow</span>
+                                    <i class="fa fa-times o_followers_unfollow"></i>
+                                    <span class="o_followers_unfollow"> Unfollow</span>
+                                    <i class="fa fa-check o_followers_following"></i>
+                                    <span class="o_followers_following"> Following</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn btn-link o_chatter_button_attachment"
+                                title="View all the attachments of the current record" disabled="">
+            <span>
+                <i class="fa fa-paperclip"></i>
+                <span class="o_chatter_attachment_button_count">
+                    0
+                </span>
+            </span>
+                        </button>
+
+
+                        <div class="o_topbar_right_area"></div>
+                    </div>
+                    <div class="o_mail_activity o_field_widget" name="activity_ids"></div>
+                    <div class="o_mail_thread">
+
+
+                        <div class="o_mail_thread_content">
+
+
+                            <div class="o_thread_date_separator">
+                <span class="o_thread_date">
+                    Today
+                </span>
+
+                            </div>
+
+
+                            <div class="o_thread_message   o_mail_not_discussion " data-message-id="0">
+                                <div class="o_thread_message_sidebar">
+
+                                    <div class="o_thread_message_sidebar_image">
+                                        <img alt="" src="/web/image/res.partner/3/image_128" data-oe-model="res.partner"
+                                             data-oe-id="" class="o_thread_message_avatar rounded-circle ">
+
+                                        <span class="o_updatable_im_status" data-partner-id="3">
+
+
+
+
+
+
+
+
+        </span>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="o_thread_message_core">
+                                    <p class="o_mail_info text-muted">
+
+
+                                        <strong data-oe-model="res.partner" data-oe-id="" class="o_thread_author ">
+                                            YourCompany, Mitchell Admin
+                                        </strong>
+
+                                        - <small class="o_mail_timestamp" title="04/13/2020 13:40:45">14 minutes
+                                        ago</small>
+
+
+                                        <span class="o_thread_icons">
+
+
+
+
+
+
+                    </span>
+                                    </p>
+                                    <div class="o_thread_message_content">
+                                        <p>Creating a new record...</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<ul id="ui-id-8" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+    style="display: none;"></ul>
+<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+<ul id="ui-id-9" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+    style="display: none;"></ul>
+<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+<ul id="ui-id-10" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+    style="display: none;"></ul>
+<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+<ul id="ui-id-11" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+    style="display: none;"></ul>
+<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+<ul id="ui-id-12" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+    style="display: none;"></ul>
+<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+<ul id="ui-id-13" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+    style="display: none;"></ul>
+<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+<ul id="ui-id-14" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+    style="display: none;"></ul>
+<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+<ul id="ui-id-17" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+    style="display: none;"></ul>
+<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+</body>
+
+</html>

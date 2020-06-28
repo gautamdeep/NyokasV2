@@ -1,0 +1,17 @@
+
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+Do you want to delete<br>
+id :: {{ id }}
+'group_name': {{group_name}},<br>
+'item_name': {{item_name}},<br>
+'brand': {{brand}},<br>
+"item_property": {{item_property}},<br>
+'unit': {{unit}},<br>
+'sku_code': {{sku_code}},<br>
+'opening_stock': {{opening_stock}}<br>
+
+ <button class="mb-2 mr-2 btn btn-danger" ><a href="/delete_stock_Items/?z={{id}}&c='s'"  >Delete</a></button>
+{% endblock %}

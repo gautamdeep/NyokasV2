@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+Do you want to delete<br>
+id :: {{ id }} <br>
+'vender_type': {{vender_type}},
+'vendor_name': {{vendor_name}},
+'address': {{address}},
+"city": {{city}},
+'state': {{state}},
+'country': {{country}},
+'phone_number': {{phone_number}},
+'pan_no': {{pan_no}},
+'mobile1': {{mobile1}},
+'email': {{email}},
+'website': {{website}},
+'tag': {{tag}}
+
+<button class="mb-2 mr-2 btn btn-danger"><a href="/deleteItemCategory/?z={{id}}&c='s'">Delete</a></button>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+
+<H2>Create Daily Progress Report</H2>
+<br><br>
+<form action="/callentry/" method="post">
+    {% csrf_token %}
+    CallID:
+    <input type="text" name="callID" required><br><br>
+    Address:
+    <input type="text" name="address" required><br><br>
+    Phone Number:
+    <input type="text" name="phonenumber" required><br><br>
+    Report:
+    <textarea rows="5" cols="40" name="report" required></textarea>
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

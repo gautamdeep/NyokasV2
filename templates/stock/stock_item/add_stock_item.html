@@ -1,0 +1,122 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+
+<!--add new item categories-->
+
+
+<form action="/stock_items/" method="post">
+    {% csrf_token %}
+    <div class="modal-header">
+        <h4 class="modal-title">Add Stock</h4>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4">
+            <div class="position-relative form-group"><label class="">Item Group</label>
+                <select
+                        name="sku_code" id="service" class="form-control">
+                    {% for i in sku_code %}
+
+                    <option>{{i}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="position-relative form-group"><label class="">Brand</label>
+                <input
+                        name="brand"
+                        placeholder="Brand"
+                        required
+                        class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="position-relative form-group"><label class="">Model</label>
+        <input
+                name="model"
+                type="text"
+                class="form-control"
+                required
+        >
+    </div>
+    <div class="position-relative form-group">
+        <label class="">Quantity</label>
+        <input
+                name="quantity"
+                type="text"
+                class="form-control"
+                required
+        >
+    </div>
+    <div class="form-row">
+        <div class="col-md-6">
+            <div class="position-relative form-group">
+                <label for="unit" class="">Unit</label>
+                <input name="unit"
+                       id="unit"
+                       type="text"
+                       class="form-control"
+                       required
+                >
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="position-relative form-group">
+                <label for="net_cost" class="">Net Cost</label>
+                <input
+                        name="net_cost"
+                        id="net_cost"
+                        type="text"
+                        class="form-control"
+                        required
+                >
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="position-relative form-group">
+                <label for="vat" class="">VAT </label>
+                <input
+                        name="vat"
+                        id="vat"
+                        type="text"
+                        class="form-control"
+                        required
+                >
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="position-relative form-group">
+                <label for="venders" class="">Supliers/Vender </label>
+                <input
+                        name="venders"
+                        id="venders"
+                        type="text"
+                        class="form-control"
+                        required
+                >
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="position-relative form-group">
+                <label class="">Non Purchase </label>
+                <input
+                        name="non_purchae"
+
+                        type="text"
+                        class="form-control"
+                        required
+                >
+            </div>
+        </div>
+
+    </div>
+    <div class="" align="left">
+        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+        <input type="submit" class="btn btn-success" value="Add">
+    </div>
+</form>
+
+
+{% endblock %}

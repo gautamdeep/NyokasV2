@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+{% csrf_token %}
+Welcome {{e}}
+<br><br>
+Date: {{d}}<br>
+Work : {{w}}<br>
+Progress: {{p}}<br>
+
+{% endblock %}

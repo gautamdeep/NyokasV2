@@ -1,0 +1,97 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+
+<!--add new item categories-->
+
+
+<form action="/item_categories/" method="post">
+    {% csrf_token %}
+    <div class="modal-header">
+        <h4 class="modal-title">Add Item Categories</h4>
+    </div>
+    <div class="form-row">
+        <div class="col-md-4">
+            <div class="position-relative form-group"><label class="">Item Group</label>
+                <select
+                        name="group_name" id="service" class="form-control">
+                    {% for i in group_name %}
+
+                    <option>{{i}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="position-relative form-group"><label class="">Item Name</label>
+                <input
+                        name="item_name"
+                        placeholder="Item Name"
+                        required
+                        class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="position-relative form-group"><label class="">Brand</label>
+        <input
+                name="brand"
+                type="text"
+                class="form-control"
+                required
+        >
+    </div>
+    <div class="position-relative form-group">
+        <label for="landmark" class="">Item Property</label>
+        <select
+                name="item_property" id="landmark" class="form-control">
+            <option>Countable</option>
+            <option>Non-countable</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6">
+            <div class="position-relative form-group">
+                <label for="unit" class="">Unit</label>
+                <input name="unit"
+                       id="unit"
+                       type="text"
+                       class="form-control"
+                       required
+                >
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="position-relative form-group">
+                <label for="sku_code" class="">SKU / Code</label>
+                <input
+                        name="sku_code"
+                        id="sku_code"
+                        type="text"
+                        class="form-control"
+                        required
+                >
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="position-relative form-group">
+                <label for="opening_stock" class="">Opening Stock </label>
+                <input
+                        name="opening_stock"
+                        id="opening_stock"
+                        type="text"
+                        class="form-control"
+                        required
+                >
+            </div>
+        </div>
+
+    </div>
+    <div class="" align="left">
+        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+        <input type="submit" class="btn btn-success" value="Add">
+    </div>
+</form>
+
+
+{% endblock %}

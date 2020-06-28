@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+    <style>
+        div{
+        position : absolute;
+        right : 10px;
+        top : 5px
+        }
+    </style>
+</head>
+<body>
+{% csrf_token %}
+Welcome {{e}}
+
+<br><br>
+<button type="button" onclick="location.href='{% url 'callentry' %}'">Create Calls Report</button>
+<button type="button" onclick="location.href='{% url 'checkcalls' %}'">Check Report</button>
+<div>
+    <button type="button" onclick="location.href='{% url 'log' %}'">Logout</button>
+</div>
+</body>
+
+</html>

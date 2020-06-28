@@ -1,0 +1,120 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+
+<!--add new item categories-->
+
+
+<form action="/vendor/" method="post">
+    {% csrf_token %}
+    <div class="modal-header">
+        <h4 class="modal-title">Add new Vendor</h4>
+    </div>
+    <div class="position-relative form-group col-md-5">
+            <label class="">Vendor Type</label>
+            <select
+                    name="vender_type" class="form-control">
+                <option>Individual</option>
+                <option>Company</option>
+            </select>
+        </div>
+    <div class="form-row">
+
+        <div class="col-md-6">
+            <div class="col-md-11">
+
+                <div class="position-relative form-group"><label class="">Vendor Name</label>
+                    <input
+                            name="vendor_name"
+                            placeholder="Vendor Name"
+                            required
+                            class="form-control">
+                </div>
+
+                <div class="position-relative form-group"><label class="">Address</label>
+                    <input
+                            name="Address"
+                            placeholder="Address"
+                            required
+                            class="form-control">
+                </div>
+                <div class="position-relative form-group"><label class="">Company Address</label>
+                    <input
+                            name="city"
+                            placeholder="City"
+                            required
+                            class="form-control">
+                    <input
+                            name="state"
+                            placeholder="State"
+                            required
+                            class="form-control">
+                    <input
+                            name="country"
+                            placeholder="Country"
+                            required
+                            class="form-control">
+                </div>
+                <div class="position-relative form-group"><label class="">Tax ID/ Pan No</label>
+                    <input
+                            name="pan_no"
+                            placeholder="Pan Number"
+                            required
+                            class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="col-md-11">
+                <div class="position-relative form-group"><label class="">Phone Number</label>
+                    <input
+                            name="phone_number"
+                            placeholder="phone_number"
+                            required
+                            class="form-control">
+                </div>
+                <div class="position-relative form-group"><label class="">Mobile Number</label>
+                    <input
+                            name="mobile1"
+                            placeholder="mobile number"
+                            required
+                            class="form-control">
+
+                </div>
+                <div class="position-relative form-group"><label class="">Email</label>
+                    <input
+                            name="email"
+                            placeholder="Email"
+                            required
+                            class="form-control">
+                </div>
+                <div class="position-relative form-group"><label class="">WebSite</label>
+                    <input
+                            name="website"
+                            placeholder="Website"
+                            required
+                            class="form-control">
+                </div>
+                <div class="position-relative form-group"><label class="">Tag</label>
+                    <input
+                            name="tag"
+                            placeholder="Tags"
+                            required
+                            class="form-control">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="" align="left">
+        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+        <input type="submit" class="btn btn-success" value="Add">
+    </div>
+</form>
+
+
+{% endblock %}  

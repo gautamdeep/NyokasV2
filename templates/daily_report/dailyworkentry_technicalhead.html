@@ -1,0 +1,56 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+<div class="">
+    <div class="main-card mb-3 card">
+        <div class="card-body"><h5 class="card-title">Daily Report </h5>
+            <table class="mb-0 table">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Site Name</th>
+                    <th>Representative</th>
+                    <th>Address</th>
+                    <th>Address2</th>
+                    <th>City</th>
+                    <th>Contact</th>
+                    <th>Contact2</th>
+                    <th>Service</th>
+                    <th>Problem</th>
+                    <th>Assign to</th>
+                    <th>Service Report</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for lis_time,date,site_name,representative,address,landmark,city,contact,contact2,service,problem,assign_to,service_report_no in front_desk_data %}
+                <tr>
+                    <th scope="row">{{date}}</th>
+                    <td>{{site_name}}</td>
+                    <td>{{representative}}</td>
+                    <td>{{address}}</td>
+                    <td>{{landmark}}</td>
+                    <td>{{city}}</td>
+                    <td>{{contact}}</td>
+                    <td>{{contact2}}</td>
+                    <td>{{service}}</td>
+                    <td>{{problem}}</td>
+                    <td>{{assign_to}}</td>
+                    <td>{{service_report_no}}</td>
+                    <td><a href="{% url 'edittechnicalhead' lis_time=lis_time %}" class="edit" data-toggle="modal"><i class="pe-7s-pen"
+                                                                                     data-toggle="tooltip"
+                                                                                     title="Edit"></i></a>
+                    <a href="{% url 'detail_daily_work_report' lis_time=lis_time %}" class="edit" data-toggle="modal"><i class="pe-7s-angle-right"
+                                                                                     data-toggle="tooltip"
+                                                                                     title="Details"></i></a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% if msg%}
+<script>
+    alert('{{ msg }}');
+
+</script>
+{% endif %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>hello</title>
+     <link href="{% static 'css/login.css' %}" rel="stylesheet">
+</head>
+
+
+<body>
+
+<div class="pen-title">
+    <h1>Nyokas Login </h1><span> <i class='fa fa-paint-brush'></i> </span>
+</div>
+<!-- Form Module-->
+<div class="module form-module">
+    <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+        :)
+    </div>
+    <div class="form" >
+         {% csrf_token %}
+        <h2>Login to your account</h2>
+        <form action="/home/" method="post">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Email"/>
+            <input type="password" name="pass" placeholder="Password"/>
+            <button value="SignIn">Login</button>
+        </form>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="{% static 'script/login.js' %}"></script>
+</body>
+</html>

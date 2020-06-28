@@ -1,0 +1,62 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+<div class="">
+    <div class="main-card mb-3 card">
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>Vendor</h4>
+            </div>
+            <div class="col-sm-6" align="right">
+                <a href="{% url 'add_new_vendor'  %}" class="btn btn-success" data-toggle="modal"><i
+                        class="material-icons">&#xE147;</i>
+                    <span>Add New Vendor</span></a>
+            </div>
+        </div>
+        <table class="mb-0 table">
+            <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Vendor Name</th>
+                <th>Address</th>
+                <th>Vendor Type</th>
+                <th>Company Address</th>
+                <th>Tax ID/Pan no</th>
+                <th>Phone Number</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>WebSite</th>
+                <th>Tag</th>
+                <th>Action</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for sn,id,vender_type,vendor_name,address,city,state,country,phone_number,pan_no,mobile1,email,website,tag in comb_lis %}
+            <tr>
+                <th scope="row">{{sn}}</th>
+                <td>{{vendor_name}}</td>
+                <td>{{address}}</td>
+                <td>{{vendor_name}}</td>
+                <td>{{city}} {{state}} {{country}}</td>
+                <td>{{pan_no}}</td>
+                <td>{{phone_number}}</td>
+                <td>{{mobile1}}</td>
+                <td>{{email}}</td>
+                <td>{{website}}</td>
+                <td>{{tag}}</td>
+                <td>
+                    <a href="/confirm_deleteItemCategory/?z={{sn}}" class="edit" data-toggle="modal"><i
+                            class="pe-7s-junk"
+                            data-toggle="tooltip"
+                            title="Delete"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+{% endblock %}

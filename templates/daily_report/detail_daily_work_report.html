@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+'id': {{data.id}} <br>
+'date' : {{data.date}},<br>
+'site_name': {{data.site_name}},<br>
+'representative': {{data.representative}},<br>
+'address': {{data.address}},<br>
+'landmark': {{data.landmark}},<br>
+'city': {{data.city}},<br>
+'contact': {{data.contact}},<br>
+'contact2': {{data.contact2}},<br>
+'service': {{data.service}},<br>
+'problem': {{data.problem}},<br>
+"assign_to": {{data.assign_to}},<br>
+'service_report_no': {{data.service_report_no}},<br>
+'bill_no': {{data.bill_no}}<br>
+'bill_amount': {{data.bill_amount}}<br>
+'bill_submit': {{data.bill_submit}}<br>
+'amount_received': {{data.amount_received}}<br>
+
+{% endblock %}
