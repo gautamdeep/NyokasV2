@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    'templates/static',
+]
 
 # Application definition
 
@@ -54,7 +58,7 @@ ROOT_URLCONF = 'NyokasV2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
