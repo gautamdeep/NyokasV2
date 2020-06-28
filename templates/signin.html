@@ -27,11 +27,11 @@
     <div class="form" >
          {% csrf_token %}
         <h2>Login to your account</h2>
-        <form action="/home/" method="post">
+        <form action="" method="POST">
             {% csrf_token %}
             <input type="email" name="email" placeholder="Email"/>
-            <input type="password" name="pass" placeholder="Password"/>
-            <button value="SignIn">Login</button>
+            <input type="password" name="password" placeholder="Password"/>
+            <button value="SignIn" type="submit" >Login</button>
         </form>
     </div>
 
