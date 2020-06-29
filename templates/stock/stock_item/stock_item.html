@@ -8,7 +8,7 @@
                 <h4>Stock</h4>
             </div>
             <div class="col-sm-6" align="right">
-                <a href="{% url 'add_stock_items'  %}" class="btn btn-success" data-toggle="modal"><i
+                <a href="/add_stock_items/" class="btn btn-success" data-toggle="modal"><i
                         class="material-icons">&#xE147;</i>
                     <span>Add New Stock Item</span></a>
             </div>
@@ -24,26 +24,26 @@
                 <th>Unit</th>
                 <th>Net Cost</th>
                 <th>VAT</th>
-                <th>Venders/Supliers</th>
+                <th>vendors/Supliers</th>
                 <th>Non Purchase</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
-            {% for sn,id,sku_code,brand,model,quantity,unit,net_cost,vat,venders,non_purchae in comb_lis %}
+            {% for stockItem in stockItem %}
             <tr>
                 <th scope="row">{{sn}}</th>
-                <td>{{sku_code}}</td>
-                <td>{{brand}}</td>
-                <td>{{model}}</td>
-                <td>{{quantity}}</td>
-                <td>{{unit}}</td>
-                <td>{{net_cost}}</td>
-                <td>{{vat}}</td>
-                <td>{{venders}}</td>
-                <td>{{non_purchae}}</td>
+                <td>{{stockItem.sku_code}}</td>
+                <td>{{stockItem.brand}}</td>
+                <td>{{stockItem.model}}</td>
+                <td>{{stockItem.quantity}}</td>
+                <td>{{stockItem.unit}}</td>
+                <td>{{stockItem.net_cost}}</td>
+                <td>{{stockItem.vat}}</td>
+                <td>{{stockItem.vendor}}</td>
+                <td>{{stockItem.non_purchae}}</td>
                 <td>
-                    <a href="/confirm_delete_stock_items/?z={{sn}}" class="edit" data-toggle="modal"><i
+                    <a href="/delete_confirm_stock_items/?id={{stockItem.id}}" class="edit" data-toggle="modal"><i
                             class="pe-7s-junk"
                             data-toggle="tooltip"
                             title="Delete"></i></a>

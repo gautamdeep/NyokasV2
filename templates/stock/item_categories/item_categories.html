@@ -8,7 +8,7 @@
                 <h4>Item Categoris</h4>
             </div>
             <div class="col-sm-6" align="right">
-                <a href="{% url 'add_item_categories'  %}" class="btn btn-success" data-toggle="modal"><i
+                <a href="/add_item_categories/" class="btn btn-success" data-toggle="modal"><i
                         class="material-icons">&#xE147;</i>
                     <span>Add New Item Categories</span></a>
             </div>
@@ -17,32 +17,35 @@
             <thead>
             <tr>
                 <th>S.No</th>
+                <th>SKU / C.O.D.E</th>
                 <th>Group Name</th>
                 <th>Item Name</th>
                 <th>Brand</th>
                 <th>Item Property</th>
                 <th>Unit</th>
-                <th>SKU / C.O.D.E</th>
+
                 <th>Opening Stock</th>
                 <th>Action</th>
 
             </tr>
             </thead>
             <tbody>
-            {% for sn,id,group_name,item_name,brand,item_property,unit,sku_code,opening_stock in comb_lis %}
+            {% for itemCategories in itemCategories %}
             <tr>
                 <th scope="row">{{sn}}</th>
-                <td>{{group_name}}</td>
-                <td>{{item_name}}</td>
-                <td>{{brand}}</td>
-                <td>{{item_property}}</td>
-                <td>{{unit}}</td>
-                <td>{{sku_code}}</td>
-                <td>{{opening_stock}}</td>
+                <td>{{itemCategories.sku_code}}</td>
+                <td>{{itemCategories.group_name}}</td>
+                <td>{{itemCategories.item_name}}</td>
+                <td>{{itemCategories.brand}}</td>
+                <td>{{itemCategories.item_property}}</td>
+                <td>{{itemCategories.unit}}</td>
+
+                <td>{{itemCategories.opening_stock}}</td>
                 <td>
-                    <a href="/confirm_deleteItemCategory/?z={{sn}}" class="edit" data-toggle="modal"><i class="pe-7s-junk"
-                                                                                                     data-toggle="tooltip"
-                                                                                                     title="Delete"></i></a>
+                    <a href="/delete_confirm_item_category/?id={{itemCategories.id}}" class="delete"
+                       data-toggle="modal"><i class="pe-7s-junk"
+                                              data-toggle="tooltip"
+                    ></i></a>
                 </td>
             </tr>
             {% endfor %}

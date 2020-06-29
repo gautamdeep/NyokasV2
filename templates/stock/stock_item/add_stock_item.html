@@ -13,12 +13,12 @@
     </div>
     <div class="form-row">
         <div class="col-md-4">
-            <div class="position-relative form-group"><label class="">Item Group</label>
+            <div class="position-relative form-group"><label class="">SKU Code / Name</label>
                 <select
                         name="sku_code" id="service" class="form-control">
-                    {% for i in sku_code %}
+                    {% for itemCategories in itemCategories %}
 
-                    <option>{{i}}</option>
+                    <option>{{itemCategories.sku_code}}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -88,10 +88,10 @@
         </div>
         <div class="col-md-3">
             <div class="position-relative form-group">
-                <label for="venders" class="">Supliers/Vender </label>
+                <label  class="">Supliers/vendor </label>
                 <input
-                        name="venders"
-                        id="venders"
+                        name="vendor"
+                        id="vendor"
                         type="text"
                         class="form-control"
                         required

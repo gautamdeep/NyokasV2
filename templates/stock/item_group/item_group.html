@@ -8,7 +8,7 @@
                 <h4>Item Group </h4>
             </div>
             <div class="col-sm-6" align="right">
-                <a href="/add_item_group" class="btn btn-success" data-toggle="modal"><i
+                <a href="#add_item_group" class="btn btn-success" data-toggle="modal"><i
                         class="material-icons">&#xE147;</i>
                     <span>Add New Item Group</span></a>
 
@@ -24,21 +24,21 @@
             </tr>
             </thead>
             <tbody>
-         <!--   {% for sn,id,group_name,stock_type in comb_lis %}
+         {% for itemGroup in itemGroup %}
             <tr>
                 <th scope="row">{{sn}}</th>
-                <td>{{group_name}}</td>
+                <td>{{itemGroup.group_name}}</td>
 
-                <td>{{stock_type}}</td>
+                <td>{{itemGroup.stock_type}}</td>
                 <td>
-                     <a href="" class="edit" data-toggle="modal"><i class="pe-7s-junk"
+                     <a href="/delete_confirm_item_group/?id={{itemGroup.id}}"  class="edit" data-toggle="modal"><i class="pe-7s-junk"
                                                                                      data-toggle="tooltip"
                                                                                      title="Delete"></i></a>
                 </td>
 
             </tr>
 
-            {% endfor %}-->
+            {% endfor %}
             </tbody>
         </table>
     </div>
