@@ -20,10 +20,6 @@
                     <th>Problem</th>
                     <th>Assign to</th>
                     <th>Service Report</th>
-                    <th>Bill No</th>
-                    <th>Bill Amount</th>
-                    <th>Bill Submit</th>
-                    <th>Amount Received</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -31,25 +27,26 @@
                 {% for dailyreports in dailyreport %}
                 <tr>
                     <th scope="row">{{dailyreports.token}}</th>
-                    <td >{{dailyreports.date}}</td>
+
+                    <th scope="row">{{dailyreports.date}}</th>
                     <td>{{dailyreports.site_name}}</td>
                     <td>{{dailyreports.representative}}</td>
                     <td>{{dailyreports.address}}</td>
                     <td>{{dailyreports.landmark}}</td>
-                    <td>{{dailyreportscity}}</td>
+                    <td>{{dailyreports.city}}</td>
                     <td>{{dailyreports.contact}}</td>
                     <td>{{dailyreports.contact2}}</td>
                     <td>{{dailyreports.service}}</td>
                     <td>{{dailyreports.problem}}</td>
                     <td>{{dailyreports.assign_to}}</td>
                     <td>{{dailyreports.service_report_no}}</td>
-                    <td>{{dailyreports.bill_no}}</td>
-                    <td>{{dailyreports.bill_amount}}</td>
-                    <td>{{dailyreports.bill_submit}}</td>
-                    <td>{{dailyreports.amount_received}}</td>
-                    <td><a href="#" class="edit" data-toggle="modal"><i class="pe-7s-angle-right"
+                    <td><a href="#" class="edit" data-toggle="modal"><i class="pe-7s-pen"
                                                                         data-toggle="tooltip"
-                                                                        title="Details"></i></a></td>
+                                                                        title="Edit"></i></a>
+                        <a href="#" class="edit" data-toggle="modal"><i class="pe-7s-angle-right"
+                                                                        data-toggle="tooltip"
+                                                                        title="Details"></i></a>
+                    </td>
 
                 </tr>
                 {% endfor %}

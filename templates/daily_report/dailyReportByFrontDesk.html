@@ -7,10 +7,21 @@
         <div class="main-card mb-3 card">
 
             <div class="card-body"><h5 class="card-title">Front Desk</h5>
-                <form class="" action="/dailyworkentry/" method="post">
+                <form class="" action="/dailyReportByFrontDesk" method="POST">
                     {% csrf_token %}
+
                     <div class="form-row">
-                        <div class="col-md-6">
+                          <div class="col-md-2">
+                            <div class="position-relative form-group"><label class="">Date</label>
+                                <input
+                                        name="date"
+                                        class="form-control"
+                                        type="date"
+                                        required
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-5">
                             <div class="position-relative form-group"><label class="">Site Name</label>
                                 <input
                                         name="site_name"
@@ -20,7 +31,7 @@
                                 >
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <div class="position-relative form-group"><label class="">Representative</label>
                                 <input
                                         name="representative"
@@ -105,7 +116,7 @@
                             >
                         </div>
                     </div>
-                    <button class="mt-2 btn btn-primary">Submit</button>
+                    <button class="mt-2 btn btn-primary" value="POST" type="submit">Submit</button>
                 </form>
             </div>
         </div>
