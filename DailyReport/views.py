@@ -21,7 +21,7 @@ def dailyReportByFrontDesk(request):
 
     if request.method == 'POST':
         dailyWorkReport = DailyWorkReport()
-        dailyWorkReport.token = request.POST.get('millis')
+        dailyWorkReport.token = millis
 
         dailyWorkReport.date = request.POST.get('date')
 
@@ -66,3 +66,22 @@ def daily_work_entry_manager(request):
         "dailyreport": DailyWorkReport.objects.all()
     }
     return render(request, "daily_report/daily_work_entry_manager.html",context)
+
+def edit_tech_head(request):
+    id = request.GET.get('id')
+    print(id)
+    return render(request, 'daily_report/updatedailyreportbytechnicalhead.html', {'id': id})
+
+def update_technical_head(request):
+    i = request.POST.get('id')
+
+    tech  = DailyWorkReport.objects.get(id=i)
+    tech.assign_to = request.POST.get('assign_to')
+    tech.service_report = request.POST.get('service_report')
+    tech.save()
+    return daily_work_entry_technical_head(request)
+
+
+
+
+

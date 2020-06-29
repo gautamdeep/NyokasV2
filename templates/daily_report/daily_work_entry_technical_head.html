@@ -40,9 +40,14 @@
                     <td>{{dailyreports.problem}}</td>
                     <td>{{dailyreports.assign_to}}</td>
                     <td>{{dailyreports.service_report_no}}</td>
-                    <td><a href="#" class="edit" data-toggle="modal"><i class="pe-7s-pen"
+                    <td>
+
+                      <a href="/edit_tech_head/?id={{dailyreports.token}}"    class="edit" data-toggle="modal"><i class="pe-7s-pen"
                                                                         data-toggle="tooltip"
-                                                                        title="Edit"></i></a>
+                                                                     title="Edit"></i></a>
+
+
+
                         <a href="#" class="edit" data-toggle="modal"><i class="pe-7s-angle-right"
                                                                         data-toggle="tooltip"
                                                                         title="Details"></i></a>
@@ -55,5 +60,15 @@
         </div>
     </div>
 </div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
 
 {% endblock %}
