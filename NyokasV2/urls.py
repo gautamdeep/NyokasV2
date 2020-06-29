@@ -21,4 +21,5 @@ urlpatterns = [
     path('UserAccount/', include('UserAccount.urls')),
     path('', include('DailyReport.urls')),
     path('', include('index.urls')),
+    path('', include('Stock.urls')),
 ]

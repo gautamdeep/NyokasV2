@@ -39,18 +39,24 @@
                     <td>{{dailyreports.service}}</td>
                     <td>{{dailyreports.problem}}</td>
                     <td>{{dailyreports.assign_to}}</td>
-                    <td>{{dailyreports.service_report_no}}</td>
+                    <td>{{dailyreports.service_report}}</td>
                     <td>
-
-                      <a href="/edit_tech_head/?id={{dailyreports.token}}"    class="edit" data-toggle="modal"><i class="pe-7s-pen"
-                                                                        data-toggle="tooltip"
-                                                                     title="Edit"></i></a>
-
+                        <!--        <a href="#technicalhead" class="edit" data-toggle="modal"><i class="pe-7s-angle-right"
+                                                                                data-toggle="tooltip"
+                                                                                title="Details"></i></a>-->
+                        <a href="/edit_tech_head/?id={{dailyreports.token}}" class="edit" data-toggle="modal"><i
+                                class="pe-7s-pen"
+                                data-toggle="tooltip"
+                                title="Edit"></i></a>
 
 
                         <a href="#" class="edit" data-toggle="modal"><i class="pe-7s-angle-right"
                                                                         data-toggle="tooltip"
                                                                         title="Details"></i></a>
+
+                        <a href="#" class="delete" data-toggle="modal"><i class="pe-7s-trash"
+                                                                        data-toggle="tooltip"
+                                                                        title="Delete"></i></a>
                     </td>
 
                 </tr>
@@ -69,6 +75,7 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
+
 </script>
 
 {% endblock %}
