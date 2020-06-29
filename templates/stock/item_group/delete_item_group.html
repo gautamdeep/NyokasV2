@@ -1,12 +1,23 @@
-
 {% extends 'home.html' %}
 {% load static %}
 {% block content %}
+<!--add new item group-->
 
-Do you want to delete<br>
-id {{id}}<br>
-Group Name {{group_name}}<br>
-stock type {{stock_type}}<br>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/delete_item_group/?id={{itemGroup.id}}" method="POST">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <h4 class="modal-title">Are You sure u want to delete {{itemGroup.group_name}}</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
 
- <button class="mb-2 mr-2 btn btn-danger" ><a href="/deleteItemGroup/?z={{id}}&c='s'"  >Delete</a></button>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-danger" value="Delete">
+                </div>
+            </form>
+        </div>
+    </div>
+
 {% endblock %}

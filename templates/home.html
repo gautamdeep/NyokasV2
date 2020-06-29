@@ -85,6 +85,8 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- wc name-->
             <div class="app-header-right">
                 <div class="header-btn-lg pr-0">
                     <div class="widget-content p-0">
@@ -434,6 +436,7 @@
                             </button>
                         </span>
             </div>
+            <!---------------------------------------------------------------------------------------------------------------------->
             <div class="scrollbar-sidebar">
                 <div class="app-sidebar__inner">
                     <ul class="vertical-nav-menu">
@@ -494,13 +497,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/item_categories">
                                         <i class="metismenu-icon"></i>
                                         Item Categories
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/stock_items">
                                         <i class="metismenu-icon"></i>
                                         Stocks Details
                                     </a>
@@ -678,7 +681,7 @@
             </div>
         </div>
 
-        <!---------------------------------------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------------------------------------->
 
         <div class="app-main__outer">
             <div class="app-main__inner">
@@ -723,10 +726,56 @@
     </div>
 </div>
 
-<!------------------------------------------------------------------------------------------------------------------>
+<!-- item group pop out ---------------------------------------------------------------------------------------------------------------->
+<div id="add_item_group" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/add_item_group/" method="POST">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Item Group</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Group Name</label>
+                        <input type="text" class="form-control" name="group_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Stock Type</label>
+                        <input type="text" class="form-control" name="stock_type" required>
+                    </div>
 
-<!----------------------------------------------------------------------------------*----------------------------->
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-success" value="Add">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
+
+<!---- DELETE ------------------------------------------------------------------------------*----------------------------->
+<div id="delete" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/delete_item_group/?id={{itemGroup.id}}" method="POST">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <h4 class="modal-title">Are you sure you want to delete {{itemGroup.group_name}}?</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-danger" value="DELETE">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <!------------------------------------------------------------------------------------------------------------------>
 
 
@@ -739,6 +788,7 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
+
 
 </script>
 

@@ -6,7 +6,7 @@
 <!--add new item categories-->
 
 
-<form action="/item_categories/" method="post">
+<form action="/item_categories/" method="POST">
     {% csrf_token %}
     <div class="modal-header">
         <h4 class="modal-title">Add Item Categories</h4>
@@ -16,9 +16,9 @@
             <div class="position-relative form-group"><label class="">Item Group</label>
                 <select
                         name="group_name" id="service" class="form-control">
-                    {% for i in group_name %}
+                    {% for itemGroup in itemGroup %}
 
-                    <option>{{i}}</option>
+                    <option>{{itemGroup.group_name}}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -42,7 +42,7 @@
         >
     </div>
     <div class="position-relative form-group">
-        <label for="landmark" class="">Item Property</label>
+        <label  class="">Item Property</label>
         <select
                 name="item_property" id="landmark" class="form-control">
             <option>Countable</option>

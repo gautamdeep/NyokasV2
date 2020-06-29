@@ -13,14 +13,15 @@ class itemGroup(models.Model):
 class itemCategories(models.Model):
     group_name = models.ForeignKey(itemGroup, on_delete=models.CASCADE)
     item_name = models.CharField(max_length=100, blank=True, default='')
-    sku_code = models.CharField(max_length=100, blank=True, default='')
+
     brand = models.CharField(max_length=100, blank=True, default='')
     item_property = models.CharField(max_length=100, blank=True, default='')
     unit = models.CharField(max_length=100, blank=True, default='')
     opening_stock = models.CharField(max_length=100, blank=True, default='')
+    sku_code = models.CharField(max_length=100, blank=True, default='')
 
     def __str__(self):
-        return self.item_name
+        return self.sku_code
 
 
 class stockItem(models.Model):
@@ -35,4 +36,4 @@ class stockItem(models.Model):
     non_purchae = models.CharField(max_length=100, blank=True, default='')
 
     def __str__(self):
-        return self.sku_code
+        return self.model
