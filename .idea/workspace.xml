@@ -2,37 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49af2d5f-4423-4474-8124-d00716fa1a10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/NyokasV2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stock/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stock/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stock/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stock/item_categories/add_item_categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stock/item_categories/add_item_categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stock/item_categories/delete_item_categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stock/item_categories/delete_item_categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stock/item_categories/item_categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stock/item_categories/item_categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stock/item_group/delete_item_group.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stock/item_group/delete_item_group.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stock/item_group/itemgroup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stock/item_group/item_group.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stock/stock_item/add_stock_item.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stock/stock_item/add_stock_item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stock/stock_item/delete_stock_item.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stock/stock_item/delete_stock_item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stock/stock_item/stock_item.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stock/stock_item/stock_item.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Product/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DailyReport/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DailyReport/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Product/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1dztZv1E2yWBp9PCefFRhpmeMDU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

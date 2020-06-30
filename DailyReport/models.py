@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from Stock.models import itemCategories
 
 Lservice = (('Installation', 'Installation'), ('Service/Repair', 'Service/Repair'), ('', 'default'))
 
