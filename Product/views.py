@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from .models import Vendor
 
 
@@ -51,3 +51,13 @@ def delete_vendor(request):
         return redirect('/vendor')
 
     return vendor(request)
+
+
+def purchase_order(request):
+    product = request.POST.getlist('product[]')
+    print(product)
+    return render(request, 'product/purchase_order/purchase_order.html')
+
+
+def purchase_order_preview(request):
+    return render(request, 'product/purchase_order/purchase_order_preview.html')

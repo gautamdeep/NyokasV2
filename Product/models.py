@@ -19,3 +19,20 @@ class Vendor(models.Model):
 
     def __str__(self):
         return self.vendor_name
+
+
+class Purchase_order(models.Model):
+    vendor = models.ForeignKey(Vendor, default='')
+    vendor_type = models.CharField(max_length=100, blank=True, default='')
+ 
+    vendor_type = models.CharField(max_length=100, blank=True, default='')
+    vendor_type = models.CharField(max_length=100, blank=True, default='')
+    vendor_type = models.CharField(max_length=100, blank=True, default='')
+    vendor_type = models.CharField(max_length=100, blank=True, default='')
+    vendor_type = models.CharField(max_length=100, blank=True, default='')
+    vendor_type = models.CharField(max_length=100, blank=True, default='')
+    vendor_type = models.CharField(max_length=100, blank=True, default='')
+
+
+    def __str__(self):
+        return self.vendor

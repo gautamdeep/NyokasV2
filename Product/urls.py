@@ -10,4 +10,7 @@ urlpatterns = [
     path('delete_confirm_vendor/', views.delete_confirm_vendor, name='delete_confirm_vendor'),
     path('delete_vendor/', views.delete_vendor, name='delete_vendor'),
 
+    path('purchase_order', views.purchase_order, name='purchase_order'),
+    path('purchase_order_preview', views.purchase_order_preview, name='purchase_order_preview'),
+
 ]
