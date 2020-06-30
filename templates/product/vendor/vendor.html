@@ -8,7 +8,7 @@
                 <h4>Vendor</h4>
             </div>
             <div class="col-sm-6" align="right">
-                <a href="{% url 'add_new_vendor'  %}" class="btn btn-success" data-toggle="modal"><i
+                <a href="/add_vendor/" class="btn btn-success" data-toggle="modal"><i
                         class="material-icons">&#xE147;</i>
                     <span>Add New Vendor</span></a>
             </div>
@@ -32,24 +32,24 @@
             </tr>
             </thead>
             <tbody>
-            {% for sn,id,vender_type,vendor_name,address,city,state,country,phone_number,pan_no,mobile1,email,website,tag in comb_lis %}
+            {% for vendor in vendor %}
             <tr>
-                <th scope="row">{{sn}}</th>
-                <td>{{vendor_name}}</td>
-                <td>{{address}}</td>
-                <td>{{vendor_name}}</td>
-                <td>{{city}} {{state}} {{country}}</td>
-                <td>{{pan_no}}</td>
-                <td>{{phone_number}}</td>
-                <td>{{mobile1}}</td>
-                <td>{{email}}</td>
-                <td>{{website}}</td>
-                <td>{{tag}}</td>
+                <th scope="row">{{vendor}}</th>
+                <td>{{vendor.vendor_name}}</td>
+                <td>{{vendor.address}}</td>
+                <td>{{vendor.vendor_type}}</td>
+                <td>{{vendor.city}} {{vendor.state}} {{vendor.country}}</td>
+                <td>{{vendor.pan_no}}</td>
+                <td>{{vendor.phone_number}}</td>
+                <td>{{vendor.mobile1}}</td>
+                <td>{{vendor.email}}</td>
+                <td>{{vendor.website}}</td>
+                <td>{{vendor.tag}}</td>
                 <td>
-                    <a href="/confirm_deleteItemCategory/?z={{sn}}" class="edit" data-toggle="modal"><i
+                    <a href="/delete_confirm_vendor/?id={{vendor.id}}" class="delete" data-toggle="modal"><i
                             class="pe-7s-junk"
                             data-toggle="tooltip"
-                            title="Delete"></i></a>
+                            ></i></a>
                 </td>
             </tr>
             {% endfor %}

@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import itemGroup,itemCategories,stockItem
+from .models import ItemGroup,ItemCategories,StockItem
 # Register your models here.
-admin.site.register(itemGroup)
-admin.site.register(itemCategories)
-admin.site.register(stockItem)
+admin.site.register(ItemGroup)
+admin.site.register(ItemCategories)
+admin.site.register(StockItem)

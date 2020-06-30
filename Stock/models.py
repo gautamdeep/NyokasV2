@@ -1,8 +1,10 @@
 from django.db import models
 
+lItem_property = (('Countable', 'Countable'), ('Non-countable', 'Non-countable'), ('', 'default'))
+
 
 # Create your models here.
-class itemGroup(models.Model):
+class ItemGroup(models.Model):
     group_name = models.CharField(max_length=100, blank=True, default='')
     stock_type = models.CharField(max_length=100, blank=True, default='')
 
@@ -10,12 +12,12 @@ class itemGroup(models.Model):
         return self.group_name
 
 
-class itemCategories(models.Model):
-    group_name = models.ForeignKey(itemGroup, on_delete=models.CASCADE)
+class ItemCategories(models.Model):
+    group_name = models.ForeignKey(ItemGroup, on_delete=models.CASCADE)
     item_name = models.CharField(max_length=100, blank=True, default='')
 
     brand = models.CharField(max_length=100, blank=True, default='')
-    item_property = models.CharField(max_length=100, blank=True, default='')
+    item_property = models.CharField(choices=lItem_property, max_length=25, default='', blank=True)
     unit = models.CharField(max_length=100, blank=True, default='')
     opening_stock = models.CharField(max_length=100, blank=True, default='')
     sku_code = models.CharField(max_length=100, blank=True, default='')
@@ -24,8 +26,8 @@ class itemCategories(models.Model):
         return self.sku_code
 
 
-class stockItem(models.Model):
-    sku_code = models.ForeignKey(itemCategories, on_delete=models.CASCADE)
+class StockItem(models.Model):
+    sku_code = models.ForeignKey(ItemCategories, on_delete=models.CASCADE)
     brand = models.CharField(max_length=100, blank=True, default='')
     model = models.CharField(max_length=100, blank=True, default='')
     unit = models.CharField(max_length=100, blank=True, default='')
