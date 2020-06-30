@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from Stock.models import itemCategories
+from Stock.models import ItemCategories
 
 Lservice = (('Installation', 'Installation'), ('Service/Repair', 'Service/Repair'), ('', 'default'))
 
@@ -8,7 +8,6 @@ Lservice = (('Installation', 'Installation'), ('Service/Repair', 'Service/Repair
 # Create your models here.
 class DailyWorkReport(models.Model):
     token = models.CharField(max_length=100, blank=True, default='')
-
     date = models.DateField(null=True, blank=True)
     site_name = models.CharField(max_length=100, blank=True, default='')
     representative = models.CharField(max_length=100, blank=True, default='')

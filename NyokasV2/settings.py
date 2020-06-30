@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'DailyReport',
-    'Stock'
+    'Stock',
+    'Product',
 ]
 
 MIDDLEWARE = [

@@ -54,9 +54,10 @@ function calc_total()
 	$('#tax_amount').val(tax_sum.toFixed(2));
 	$('#total_amount').val((tax_sum+total).toFixed(2));
 }
+
 </script>
 
-<form action="/purchase_order/" method="post">
+<form action="/purchase_order_preview" method="post">
     {% csrf_token %}
     <div class="modal-header">
         <h4 class="modal-title">Purchase Order</h4>
@@ -78,7 +79,7 @@ function calc_total()
                             class="form-control"
                             name="venders_contact1"
                             placeholder="00000000"
-                            required>
+                    >
                 </div>
                 <div class="position-relative form-group col-md-6"><label class="">Contact Number</label>
                     <input
@@ -93,15 +94,14 @@ function calc_total()
             <div class="position-relative form-group"><label class="">Order Date</label>
                 <input
                         name="order_date"
+                        type="date"
                         placeholder="order_date"
-                        required
                         class="form-control">
             </div>
             <div class="position-relative form-group"><label class="">Order status</label>
                 <input
                         name="order_status"
                         placeholder="order_status"
-                        required
                         class="form-control">
             </div>
         </div>
@@ -123,7 +123,10 @@ function calc_total()
                     <tbody>
                     <tr id='addr0'>
                         <td>1</td>
-                        <td><input type="text" name='product[]' placeholder='Enter Product Name' class="form-control"/>
+                        <td><input type="text" name='product[]'
+                                   placeholder='Enter Product Name'
+                                   required
+                                   class="form-control"/>
                         </td>
                         <td><input type="number" name='qty[]' placeholder='Enter Qty' class="form-control qty" step="0"
                                    min="0"/></td>
@@ -144,7 +147,7 @@ function calc_total()
             </div>
         </div>
         <div class="row clearfix" style="margin-top:20px">
-            <div class="pull-right col-md-4" >
+            <div class="pull-right col-md-4">
                 <table class="table table-bordered table-hover" id="tab_logic_total">
                     <tbody>
                     <tr>
@@ -176,12 +179,18 @@ function calc_total()
             </div>
         </div>
     </div>
+    <div class="position-relative form-group"><label class="">Remarks</label>
+        <input
+                name="remark"
 
+                placeholder="Remark"
+                class="form-control">
+    </div>
 
 
     <div class="" align="left">
         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-        <input type="submit" class="btn btn-success" value="Add">
+        <input type="submit" class="btn btn-success" value="Preview">
     </div>
 </form>
 
