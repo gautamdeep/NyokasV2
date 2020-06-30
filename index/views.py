@@ -4,6 +4,6 @@ from django.shortcuts import render
 
 # Create your views here.
 
-@login_required(login_url='/UserAccount/login')
+@login_required(login_url='/user_account/login')
 def home(request):
     return render(request, "dashboardanalysis.html")

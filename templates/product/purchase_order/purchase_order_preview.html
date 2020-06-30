@@ -12,6 +12,11 @@
                 return true;
             }
         });
+
+
+
+
+
 </script>
 
 <div id="invoice">
@@ -28,7 +33,7 @@
         <div class="col-md-12">
             <div class="invoice-title">
                 <h2>Invoice</h2>
-                <h3 class="pull-right">Order # 12345</h3>
+                <h3 class="pull-right">{{purchase_order.order_status}}</h3>
             </div>
             <hr>
         </div>
@@ -36,42 +41,42 @@
         <div class="row col-md-12">
 
 
-                <div class="col-md-6">
-                    <address>
-                        <strong>Billed To:</strong><br>
-                        John Smith<br>
-                        1234 Main<br>
-                        Apt. 4B<br>
-                        Springfield, ST 54321
-                    </address>
-                </div>
-                <div class="col-md-6 text-right">
-                    <address>
-                        <strong>Shipped To:</strong><br>
-                        Jane Smith<br>
-                        1234 Main<br>
-                        Apt. 4B<br>
-                        Springfield, ST 54321
-                    </address>
-                </div>
+            <div class="col-md-6">
+                <address>
+                    <strong>Billed To:</strong><br>
+                    John Smith<br>
+                    1234 Main<br>
+                    Apt. 4B<br>
+                    Springfield, ST 54321
+                </address>
+            </div>
+            <div class="col-md-6 text-right">
+                <address>
+                    <strong>Shipped To:</strong><br>
+                    Jane Smith<br>
+                    1234 Main<br>
+                    Apt. 4B<br>
+                    Springfield, ST 54321
+                </address>
+            </div>
 
         </div>
         <!--payment-->
         <div class="row col-md-12">
 
-                <div class="col-md-6">
-                    <address>
-                        <strong>Payment Method:</strong><br>
-                        Visa ending **** 4242<br>
-                        jsmith@email.com
-                    </address>
-                </div>
-                <div class="col-md-6 text-right">
-                    <address>
-                        <strong>Order Date:</strong><br>
-                        March 7, 2014<br><br>
-                    </address>
-                </div>
+            <div class="col-md-6">
+                <address>
+                    <strong>Payment Method:</strong><br>
+                    Visa ending **** 4242<br>
+                    jsmith@email.com
+                </address>
+            </div>
+            <div class="col-md-6 text-right">
+                <address>
+                    <strong>Order Date:</strong><br>
+                    {{purchase_order.order_date}}<br><br>
+                </address>
+            </div>
 
         </div>
     </div>
@@ -84,60 +89,179 @@
                 <h3 class="panel-title"><strong>Order summary</strong></h3>
             </div>
             <div class="panel-body">
-                <div class="table-responsive">
-                    <table class="table table-condensed">
-                        <thead>
-                        <tr>
-                            <td><strong>Item</strong></td>
-                            <td class="text-center"><strong>Price</strong></td>
-                            <td class="text-center"><strong>Quantity</strong></td>
-                            <td class="text-right"><strong>Totals</strong></td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <!-- foreach ($order->lineItems as $line) or some such thing here -->
-                        <tr>
-                            <td>BS-200</td>
-                            <td class="text-center">$10.99</td>
-                            <td class="text-center">1</td>
-                            <td class="text-right">$10.99</td>
-                        </tr>
-                        <tr>
-                            <td>BS-400</td>
-                            <td class="text-center">$20.00</td>
-                            <td class="text-center">3</td>
-                            <td class="text-right">$60.00</td>
-                        </tr>
-                        <tr>
-                            <td>BS-1000</td>
-                            <td class="text-center">$600.00</td>
-                            <td class="text-center">1</td>
-                            <td class="text-right">$600.00</td>
-                        </tr>
-                        <tr>
-                            <td class="thick-line"></td>
-                            <td class="thick-line"></td>
-                            <td class="thick-line text-center"><strong>Subtotal</strong></td>
-                            <td class="thick-line text-right">$670.99</td>
-                        </tr>
-                        <tr>
-                            <td class="no-line"></td>
-                            <td class="no-line"></td>
-                            <td class="no-line text-center"><strong>Shipping</strong></td>
-                            <td class="no-line text-right">$15</td>
-                        </tr>
-                        <tr>
-                            <td class="no-line"></td>
-                            <td class="no-line"></td>
-                            <td class="no-line text-center"><strong>Total</strong></td>
-                            <td class="no-line text-right">$685.99</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div class="col-md-12 row">
+                    <div class="col-md-6 ">
+                        <strong>Product</strong><br><br>
+                        {% for y in purchase_order.product %}
+                        {{y}}<br><br>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Quantity</strong><br><br>
+                        {% for y in purchase_order.qty %}
+                        {{y}}<br><br>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Price</strong><br><br>
+                        {% for y in purchase_order.price %}
+                        {{y}}<br><br>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Amount</strong><br><br>
+                        {% for y in purchase_order.total %}
+                        {{y}}<br><br>
+                        {% endfor %}
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-12 row">
+                    <div class="col-md-6 ">
+
+
+                    </div>
+                    <div class="col-md-2">
+
+
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Sub Total</strong><br>
+
+                    </div>
+                    <div class="col-md-2">
+                        <strong>{{purchase_order.sub_total}}</strong><br>
+
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-12 row">
+                    <div class="col-md-6 ">
+
+
+                    </div>
+                    <div class="col-md-2">
+
+
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Sub Total</strong><br>
+
+                    </div>
+                    <div class="col-md-2">
+                        <strong>{{purchase_order.sub_total}}</strong><br>
+
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-12 row">
+                    <div class="col-md-6 ">
+
+
+                    </div>
+                    <div class="col-md-2">
+
+
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Tax</strong><br>
+
+                    </div>
+                    <div class="col-md-2">
+                        <strong>{{purchase_order.tax}}</strong><br>
+
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-12 row">
+                    <div class="col-md-6 ">
+
+
+                    </div>
+                    <div class="col-md-2">
+
+
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Tax Amount</strong><br>
+
+                    </div>
+                    <div class="col-md-2">
+                        <strong>{{purchase_order.tax_amount}}</strong><br>
+
+                    </div>
+                </div>
+                    <br>
+                <div class="col-md-12 row">
+                    <div class="col-md-6 ">
+
+
+                    </div>
+                    <div class="col-md-2">
+
+
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Grand Total</strong><br>
+
+                    </div>
+                    <div class="col-md-2">
+                        <strong>{{purchase_order.total_amount}}</strong><br>
+
+                    </div>
                 </div>
             </div>
+
+
+            <!--<div class="table-responsive">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr>
+                        <td><strong>Product</strong></td>
+                        <td class="text-center"><strong>Price</strong></td>
+                        <td class="text-center"><strong>Quantity</strong></td>
+                        <td class="text-right"><strong>Totals</strong></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    &lt;!&ndash; foreach ($order->lineItems as $line) or some such thing here &ndash;&gt;
+                   {% for  y in purchase_order.product %}
+
+                    <tr>
+
+                        <td>{{purchase_order.product}}</td>
+
+                        <td class="text-center">$10.99</td>
+                        <td class="text-center">1</td>
+                        <td class="text-right">$10.99</td>
+                    </tr>
+
+
+                     {% endfor %}
+                    <tr>
+                        <td class="thick-line"></td>
+                        <td class="thick-line"></td>
+                        <td class="thick-line text-center"><strong>Subtotal</strong></td>
+                        <td class="thick-line text-right">$670.99</td>
+                    </tr>
+                    <tr>
+                        <td class="no-line"></td>
+                        <td class="no-line"></td>
+                        <td class="no-line text-center"><strong>Shipping</strong></td>
+                        <td class="no-line text-right">$15</td>
+                    </tr>
+                    <tr>
+                        <td class="no-line"></td>
+                        <td class="no-line"></td>
+                        <td class="no-line text-center"><strong>Total</strong></td>
+                        <td class="no-line text-right">$685.99</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>-->
         </div>
     </div>
+</div>
 
 </div>
 
