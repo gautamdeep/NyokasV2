@@ -61,7 +61,7 @@ def purchase_order(request):
 
     if request.method == 'POST':
         purchase_order = Purchase_order()
-        purchase_order.vendor = request.POST.get('vendor')
+        purchase_order.vendor = Vendor.objects.get(vendor_name=request.POST.get('vendor'))
         purchase_order.vendor_contact1 = request.POST.get('vendor_contact1')
         purchase_order.vendor_contact2 = request.POST.get('vendor_contact2')
         purchase_order.order_date = request.POST.get('order_date')
@@ -83,22 +83,21 @@ def purchase_order(request):
 
 
 def add_purchase_order(request):
-    return render(request, 'product/purchase_order/add_purchase_order.html')
+    context = {
+        "vendor": Vendor.objects.all()
+    }
+    return render(request, 'product/purchase_order/add_purchase_order.html', context)
 
 
 def purchase_order_preview(request):
     id = request.GET.get('id')
     purchase_order = Purchase_order.objects.get(id=id)
-    a=purchase_order.product
-    b=purchase_order.qty
-    c=purchase_order.price
-    d=purchase_order.total
 
 
-    print(purchase_order.product)
     context = {
-        'purchase_order': purchase_order
-
+        'purchase_order': purchase_order,
+        'a': range(1, len(purchase_order.product) + 1),
+        "vendor": Vendor.objects.get(id=purchase_order.vendor_id)
     }
 
-    return render(request, 'product/purchase_order/purchase_order_preview.html',context)
+    return render(request, 'product/purchase_order/purchase_order_preview.html', context)

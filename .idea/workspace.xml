@@ -2,79 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49af2d5f-4423-4474-8124-d00716fa1a10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dumpdata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/migrations/0002_auto_20200630_1747.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product/purchase_order/add_purchase_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0002_auto_20200630_1956.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Account/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Account/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Account/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Account/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/calls/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calls/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/calls/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calls/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/calls/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calls/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/calls/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calls/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/calls/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calls/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/calls/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calls/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/calls/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/daily_report/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/daily_report/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/daily_report/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/daily_report/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/migrations/0002_remove_dailyworkreport_user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/migrations/0003_dailyworkreport_date.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/migrations/0004_dailyworkreport_token.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/daily_report/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/daily_report/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/daily_report/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/daily_report/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DailyReport/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/daily_report/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NyokasV2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/NyokasV2/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NyokasV2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NyokasV2/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/migrations/0002_auto_20200630_0536.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/migrations/0003_auto_20200630_0620.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/migrations/0004_auto_20200630_0621.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stock/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAccount/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_account/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAccount/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_account/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAccount/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_account/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAccount/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_account/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAccount/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_account/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAccount/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_account/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAccount/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_account/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAccount/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product/purchase_order/purchase_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/purchase_order/purchase_order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/migrations/0002_auto_20200630_1747.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/purchase_order/add_purchase_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/purchase_order/add_purchase_order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/product/purchase_order/purchase_order_preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/purchase_order/purchase_order_preview.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../templates/crash-course-CRM-part-10-crud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Django Projects/Blog 12 code Snipped" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
@@ -131,10 +72,10 @@
       <screen x="40" y="25" width="1326" height="743" />
     </state>
     <state x="332" y="78" width="732" height="644" key="#Inspections/40.25.1326.743@40.25.1326.743" timestamp="1593524418389" />
-    <state x="486" y="154" width="424" height="491" key="FileChooserDialogImpl" timestamp="1593439821634">
+    <state x="486" y="154" width="424" height="491" key="FileChooserDialogImpl" timestamp="1593582581918">
       <screen x="40" y="25" width="1326" height="743" />
     </state>
-    <state x="486" y="154" width="424" height="491" key="FileChooserDialogImpl/40.25.1326.743@40.25.1326.743" timestamp="1593439821634" />
+    <state x="486" y="154" width="424" height="491" key="FileChooserDialogImpl/40.25.1326.743@40.25.1326.743" timestamp="1593582581918" />
     <state x="222" y="31" width="962" height="737" key="SettingsEditor" timestamp="1593444735133">
       <screen x="40" y="25" width="1326" height="743" />
     </state>

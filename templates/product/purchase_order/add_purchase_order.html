@@ -69,7 +69,10 @@ function calc_total()
                         name="vendor" id="service" class="form-control">
 
 
-                    <option></option>
+                    {% for vendor in vendor %}
+
+                    <option>{{vendor.vendor_name}}</option>
+                    {% endfor %}
 
                 </select>
             </div>

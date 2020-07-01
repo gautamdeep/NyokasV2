@@ -17,6 +17,9 @@
 
 
 
+
+
+
 </script>
 
 <div id="invoice">
@@ -32,10 +35,9 @@
 
         <div class="col-md-12">
             <div class="invoice-title">
-                <h2>Invoice</h2>
-                <h3 class="pull-right">{{purchase_order.order_status}}</h3>
+                <h2>Purchase Order</h2>
+                <h3 class="pull-right">Order Number:{{purchase_order.order_status}}</h3>
             </div>
-            <hr>
         </div>
         <!--details-->
         <div class="row col-md-12">
@@ -44,34 +46,13 @@
             <div class="col-md-6">
                 <address>
                     <strong>Billed To:</strong><br>
-                    John Smith<br>
-                    1234 Main<br>
-                    Apt. 4B<br>
-                    Springfield, ST 54321
+                    {{vendor.vendor_name}}<br>
+                    {{vendor.address}} {{vendor.city}} {{vendor.state}}<br>
+                    {{vendor.country}}<br>
+                    {{vendor.phone_number}}
                 </address>
             </div>
-            <div class="col-md-6 text-right">
-                <address>
-                    <strong>Shipped To:</strong><br>
-                    Jane Smith<br>
-                    1234 Main<br>
-                    Apt. 4B<br>
-                    Springfield, ST 54321
-                </address>
-            </div>
-
-        </div>
-        <!--payment-->
-        <div class="row col-md-12">
-
-            <div class="col-md-6">
-                <address>
-                    <strong>Payment Method:</strong><br>
-                    Visa ending **** 4242<br>
-                    jsmith@email.com
-                </address>
-            </div>
-            <div class="col-md-6 text-right">
+            <div class="col-md-6 text-right pull-right">
                 <address>
                     <strong>Order Date:</strong><br>
                     {{purchase_order.order_date}}<br><br>
@@ -90,7 +71,13 @@
             </div>
             <div class="panel-body">
                 <div class="col-md-12 row">
-                    <div class="col-md-6 ">
+                    <div class="col-md-1 ">
+                        <strong>Sno</strong><br><br>
+                        {% for y in a %}
+                        {{y}}<br><br>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-5 ">
                         <strong>Product</strong><br><br>
                         {% for y in purchase_order.product %}
                         {{y}}<br><br>
@@ -113,25 +100,6 @@
                         {% for y in purchase_order.total %}
                         {{y}}<br><br>
                         {% endfor %}
-                    </div>
-                </div>
-                <br>
-                <div class="col-md-12 row">
-                    <div class="col-md-6 ">
-
-
-                    </div>
-                    <div class="col-md-2">
-
-
-                    </div>
-                    <div class="col-md-2">
-                        <strong>Sub Total</strong><br>
-
-                    </div>
-                    <div class="col-md-2">
-                        <strong>{{purchase_order.sub_total}}</strong><br>
-
                     </div>
                 </div>
                 <br>
@@ -191,7 +159,7 @@
 
                     </div>
                 </div>
-                    <br>
+                <br>
                 <div class="col-md-12 row">
                     <div class="col-md-6 ">
 

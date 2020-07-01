@@ -52,7 +52,7 @@ class Purchase_order(models.Model):
         size=10
     )
 
-    vendor = models.CharField(max_length=100, blank=True, default='')
+    vendor = models.ForeignKey(Vendor,on_delete=models.DO_NOTHING, blank=True, default='')
     vendor_contact1 = models.CharField(max_length=100, blank=True, default='')
     vendor_contact2 = models.CharField(max_length=100, blank=True, default='')
     order_date = models.CharField(max_length=100, blank=True, default='')
