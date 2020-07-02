@@ -1,0 +1,125 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+<div class="tab-content">
+    <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+        <div class="main-card mb-3 card">
+
+            <div class="card-body"><h5 class="card-title">Front Desk</h5>
+
+
+                    <div class="form-row">
+                          <div class="col-md-2">
+                            <div class="position-relative form-group"><label class="">Date</label>
+                                <input
+                                        name="date"
+                                        class="form-control"
+                                        type="date"
+                                        required
+                                        disabled
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="position-relative form-group"><label class="">Site Name</label>
+                                <input
+                                        name="site_name"
+                                        placeholder="Site Name "
+                                        class="form-control"
+                                        required
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="position-relative form-group"><label class="">Representative</label>
+                                <input
+                                        name="representative"
+                                        placeholder="Representative Name"
+                                        required
+                                        class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-relative form-group"><label for="exampleAddress" class="">Address</label>
+                        <input
+                                name="address"
+                                id="exampleAddress"
+                                placeholder="Nagdhunga "
+                                type="text"
+                                class="form-control"
+                                required
+                        >
+                    </div>
+                    <div class="position-relative form-group">
+                        <label for="landmark" class="">Landmark</label>
+                        <input name="landmark"
+                               id="landmark"
+                               placeholder="Apartment, studio, or floor ,near by"
+                               type="text"
+                               class="form-control"
+                               required
+                        >
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="position-relative form-group">
+                                <label for="exampleCity" class="">City</label>
+                                <input name="city"
+                                       id="exampleCity"
+                                       type="text"
+                                       class="form-control"
+                                       required
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="position-relative form-group">
+                                <label for="contact1" class="">Contact number 1</label>
+                                <input
+                                        name="contact"
+                                        id="contact1"
+                                        type="text"
+                                        class="form-control"
+                                        required
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="position-relative form-group">
+                                <label for="contact2" class="">Contact number 2 </label>
+                                <input
+                                        name="contact2"
+                                        id="contact2"
+                                        type="text"
+                                        class="form-control"
+                                        required
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-4 position-relative form-group">
+                            <label for="service" class="">Service</label>
+                            <select
+                                    name="service" id="service" class="form-control">
+                                <option>Installation</option>
+                                <option>Service/Repair</option>
+                            </select>
+                        </div>
+                        <div class="position-relative form-group col-md-8">
+                            <label for="problems" class="">Problem</label>
+                            <input
+                                    name="problem"
+                                    id="problems"
+                                    type="text"
+                                    class="form-control"
+                                    required
+                            >
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

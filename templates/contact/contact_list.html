@@ -1,0 +1,83 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-6">
+        <h4>CONTACTS</h4>
+    </div>
+    <div class="col-sm-6" align="right">
+        <a href="/add_contact/" class="btn btn-success" data-toggle="modal"><i
+                class="material-icons">&#xE147;</i>
+            <span>Add New Contact</span></a>
+    </div>
+</div>
+<br>
+<div class="container">
+    <!-- contacts card -->
+    <div class="card card-default" id="card_contacts">
+        <div id="contacts" class="panel-collapse collapse show" aria-expanded="true" style="">
+            <ul class="list-group pull-down" id="contact-list">
+                {% for contact in contact %}
+                <li class="list-group-item">
+                    <div class="row w-100">
+                        <div class="col-12 col-sm-6 col-md-3 px-0">
+                            <img src={{contact.image.url}}
+                                 alt="{{contact.name}}" class="rounded-circle mx-auto d-block img-fluid">
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">
+                               <span class="fa  fa-2x text-success float-right pulse" title="online now">
+                                <a href="/contact_details/?id={{contact.id}}"
+
+                                   class="edit"
+                                   data-toggle="modal"><i
+                                        class="pe-7s-angle-right"
+                                        data-toggle="tooltip"
+                                        title="Edit"></i>
+                                </a>
+                            </span>
+                            <span class="fa  fa-2x text-success float-right pulse" title="online now">
+                                <a href="/contact_details/?id={{contact.id}}"
+
+                                   class="edit"
+                                   data-toggle="modal"><i
+                                        class="pe-7s-trash"
+                                        data-toggle="tooltip"
+                                        title="Delete"></i>
+                                </a>
+                            </span>
+
+                            <span class="fa  fa-2x text-success float-right pulse" title="online now">
+                                <a href="/contact_details/?id={{contact.id}}"
+
+                                   class="edit"
+                                   data-toggle="modal"><i
+                                        class="pe-7s-angle-right"
+                                        data-toggle="tooltip"
+                                        title="Details"></i>
+                                </a>
+                            </span>
+
+
+                            <label class="name lead">{{contact.name}}</label>
+                            <br>
+                            <span class="fa fa-map-marker fa-fw text-muted" data-toggle="tooltip" title=""
+                                  data-original-title="5842 Hillcrest Rd"></span>
+                            <span class="text-muted">{{contact.address}}</span>
+                            <br>
+                            <span class="fa fa-phone fa-fw text-muted" data-toggle="tooltip" title=""
+                                  data-original-title="(870) 288-4149"></span>
+                            <span class="text-muted small">{{contact.phone_number}}</span>
+                            <br>
+                            <span class="fa fa-envelope fa-fw text-muted" data-toggle="tooltip" data-original-title=""
+                                  title=""></span>
+                            <span class="text-muted small text-truncate">{{contact.email}}</span>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            <!--/contacts list-->
+        </div>
+    </div>
+</div>
+{% endblock %}
