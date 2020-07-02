@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from .models import DailyWorkReport
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from user_account.decorators import unauthenticated_user, allowed_users, admin_only
 
 
 # Create your views here.
+@login_required(login_url='/user_account/login')
 def dailyreport(request):
     context = {
         "dailyreport": DailyWorkReport.objects.all()
@@ -11,6 +14,8 @@ def dailyreport(request):
     return render(request, "daily_report/daily_work_report.html", context)
 
 
+@login_required(login_url='/user_account/login')
+@allowed_users(allowed_roles=['front_desk', 'admin'])
 def dailyReportByFrontDesk(request):
     import time
     from datetime import datetime, timezone
@@ -42,7 +47,7 @@ def dailyReportByFrontDesk(request):
         return render(request, 'daily_report/dailyReportByFrontDesk.html')
 
 
-
+@login_required(login_url='/user_account/login')
 def daily_work_entry_technical_head(request):
     context = {
         "dailyreport": DailyWorkReport.objects.all()
@@ -50,11 +55,14 @@ def daily_work_entry_technical_head(request):
     return render(request, "daily_report/daily_work_entry_technical_head.html", context)
 
 
+@login_required(login_url='/user_account/login')
+@allowed_users(allowed_roles=['technical_head', 'admin'])
 def edit_tech_head(request):
     id = request.GET.get('id')
     return render(request, 'daily_report/updatedailyreportbytechnicalhead.html', {'id': id})
 
 
+@login_required(login_url='/user_account/login')
 def update_technical_head(request):
     i = request.POST.get('id')
     print(i)
@@ -67,6 +75,7 @@ def update_technical_head(request):
     return daily_work_entry_technical_head(request)
 
 
+@login_required(login_url='/user_account/login')
 def daily_work_entry_manager(request):
     context = {
         "dailyreport": DailyWorkReport.objects.all()
@@ -74,11 +83,15 @@ def daily_work_entry_manager(request):
     return render(request, "daily_report/daily_work_entry_manager.html", context)
 
 
+@login_required(login_url='/user_account/login')
+@allowed_users(allowed_roles=['manager', 'admin'])
 def manager_edit_daily_report(request):
     id = request.GET.get('id')
-    return render(request, 'daily_report/update_daily_report_by_manager.html', {'id':  id})
+    return render(request, 'daily_report/update_daily_report_by_manager.html', {'id': id})
 
 
+@login_required(login_url='/user_account/login')
+@allowed_users(allowed_roles=['manager', 'admin'])
 def manager_update_daily_report(request):
     i = request.POST.get('id')
     print(i)
