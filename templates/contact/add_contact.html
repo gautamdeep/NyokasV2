@@ -6,7 +6,7 @@
 <!--add new item categories-->
 
 
-<form action="/contact_list/" method="post">
+<form action="/contact_list/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="modal-header">
         <h4 class="modal-title">Add new contact</h4>
@@ -111,7 +111,7 @@
         <div class="form-group">
             <label class="control-label col-md-3">Image</label>
             <div class="col-md-4">
-                <input name="image" type="file" class="default" />
+                <input name="image" type="file"   />
             </div>
         </div>
     </div>

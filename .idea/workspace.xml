@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49af2d5f-4423-4474-8124-d00716fa1a10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/contact/migrations/0002_auto_20200702_1248.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/migrations/0003_auto_20200702_1350.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/migrations/0004_auto_20200702_1507.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/migrations/0005_auto_20200702_1510.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Screenshot_from_2020-06-30_08-09-53.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/add_contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/contact_details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/contact_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact/migrations/0006_auto_20200702_1617.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact/migrations/0007_auto_20200702_1618.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NyokasV2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/NyokasV2/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screenshot_from_2020-03-25_08-04-01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/Screenshot_from_2020-06-30_08-09-53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/add_contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/add_contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/stock/item_categories/add_item_categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stock/item_categories/add_item_categories.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Contact
+from django.core.files.storage import FileSystemStorage
 
 
 # Create your views here.
@@ -12,10 +13,15 @@ def contact_list(request):
         contact = Contact()
         contact.name = request.POST.get('name')
         contact.gender = request.POST.get('gender')
+        if request.POST.get('image') == "":
+            pass
+        else:
+            print("+++++++++++++++++++++++"+request.POST.get('image')+"------------------------------")
 
-        contact.image = request.POST.get('image')
-
-
+            myfile = request.FILES['image']
+            fs = FileSystemStorage()
+            fs.save(myfile.name, myfile)
+            contact.image = request.POST.get('image')
 
         contact.address = request.POST.get('address')
         contact.city = request.POST.get('city')
