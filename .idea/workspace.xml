@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49af2d5f-4423-4474-8124-d00716fa1a10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/Screenshot from 2020-03-25 07-34-22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Screenshot from 2020-03-25 07-34-22_al07OoC.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Screenshot from 2020-06-30 08-09-53.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Screenshot_from_2020-03-23_09-12-22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Screenshot_from_2020-03-25_07-34-22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Screenshot_from_2020-03-25_07-34-22_G4irAfF.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Screenshot_from_2020-06-30_08-09-53.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/hello.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/hello_Emkg3hf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/hello_UETCqDv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/hello_XpFlLjX.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/hello_l6n1Ps9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/delete_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/edit_contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/add_contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/add_contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/contact_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/contact_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/contact_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/contact_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_account/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_account/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/media" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Django Projects/erp-in-Python-Django KRISHESH" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -92,10 +74,10 @@
       <screen x="40" y="25" width="1326" height="743" />
     </state>
     <state x="476" y="203" width="444" height="393" key="#com.intellij.fileTypes.FileTypeChooser/40.25.1326.743@40.25.1326.743" timestamp="1593753167604" />
-    <state x="486" y="154" width="424" height="491" key="FileChooserDialogImpl" timestamp="1593673067619">
+    <state x="486" y="154" width="424" height="491" key="FileChooserDialogImpl" timestamp="1594011847342">
       <screen x="40" y="25" width="1326" height="743" />
     </state>
-    <state x="486" y="154" width="424" height="491" key="FileChooserDialogImpl/40.25.1326.743@40.25.1326.743" timestamp="1593673067619" />
+    <state x="486" y="154" width="424" height="491" key="FileChooserDialogImpl/40.25.1326.743@40.25.1326.743" timestamp="1594011847342" />
     <state x="222" y="31" width="962" height="737" key="SettingsEditor" timestamp="1593444735133">
       <screen x="40" y="25" width="1326" height="743" />
     </state>
@@ -104,17 +86,17 @@
       <screen x="40" y="25" width="1326" height="743" />
     </state>
     <state x="313" y="25" width="770" height="743" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/40.25.1326.743@40.25.1326.743" timestamp="1593757438090" />
-    <state x="526" y="314" width="353" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593761036681">
+    <state x="526" y="314" width="353" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594043726773">
       <screen x="40" y="25" width="1326" height="743" />
     </state>
-    <state x="526" y="314" width="353" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/40.25.1326.743@40.25.1326.743" timestamp="1593761036681" />
+    <state x="526" y="314" width="353" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/40.25.1326.743@40.25.1326.743" timestamp="1594043726773" />
     <state x="412" y="152" width="582" height="488" key="find.popup" timestamp="1593761172950">
       <screen x="40" y="25" width="1326" height="743" />
     </state>
     <state x="412" y="152" width="582" height="488" key="find.popup/40.25.1326.743@40.25.1326.743" timestamp="1593761172950" />
-    <state x="366" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1593540404196">
+    <state x="366" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1594043665149">
       <screen x="40" y="25" width="1326" height="743" />
     </state>
-    <state x="366" y="89" width="672" height="678" key="search.everywhere.popup/40.25.1326.743@40.25.1326.743" timestamp="1593540404196" />
+    <state x="366" y="89" width="672" height="678" key="search.everywhere.popup/40.25.1326.743@40.25.1326.743" timestamp="1594043665149" />
   </component>
 </project>
