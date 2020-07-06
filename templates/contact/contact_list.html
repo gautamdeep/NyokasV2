@@ -26,17 +26,17 @@
                         </div>
                         <div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">
                                <span class="fa  fa-2x text-success float-right pulse" title="online now">
-                                <a href="/contact_details/?id={{contact.id}}"
+                                <a href="/edit_contact/?id={{contact.id}}"
 
                                    class="edit"
                                    data-toggle="modal"><i
-                                        class="pe-7s-angle-right"
+                                        class="pe-7s-pen"
                                         data-toggle="tooltip"
                                         title="Edit"></i>
                                 </a>
                             </span>
                             <span class="fa  fa-2x text-success float-right pulse" title="online now">
-                                <a href="/contact_details/?id={{contact.id}}"
+                                <a href="/delete_confirm/?id={{contact.id}}"
 
                                    class="edit"
                                    data-toggle="modal"><i
@@ -51,7 +51,7 @@
 
                                    class="edit"
                                    data-toggle="modal"><i
-                                        class="pe-7s-angle-right"
+                                        class="pe-7s-id"
                                         data-toggle="tooltip"
                                         title="Details"></i>
                                 </a>
@@ -74,6 +74,7 @@
                         </div>
                     </div>
                 </li>
+
                 {% endfor %}
             </ul>
             <!--/contacts list-->

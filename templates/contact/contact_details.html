@@ -2,124 +2,156 @@
 {% load static %}
 {% block content %}
 
-<div class="tab-content">
-    <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
-        <div class="main-card mb-3 card">
 
-            <div class="card-body"><h5 class="card-title">Front Desk</h5>
+<!--add new item categories-->
 
 
-                    <div class="form-row">
-                          <div class="col-md-2">
-                            <div class="position-relative form-group"><label class="">Date</label>
-                                <input
-                                        name="date"
-                                        class="form-control"
-                                        type="date"
-                                        required
-                                        disabled
-                                >
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="position-relative form-group"><label class="">Site Name</label>
-                                <input
-                                        name="site_name"
-                                        placeholder="Site Name "
-                                        class="form-control"
-                                        required
-                                >
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="position-relative form-group"><label class="">Representative</label>
-                                <input
-                                        name="representative"
-                                        placeholder="Representative Name"
-                                        required
-                                        class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="position-relative form-group"><label for="exampleAddress" class="">Address</label>
-                        <input
-                                name="address"
-                                id="exampleAddress"
-                                placeholder="Nagdhunga "
-                                type="text"
-                                class="form-control"
-                                required
-                        >
-                    </div>
-                    <div class="position-relative form-group">
-                        <label for="landmark" class="">Landmark</label>
-                        <input name="landmark"
-                               id="landmark"
-                               placeholder="Apartment, studio, or floor ,near by"
-                               type="text"
-                               class="form-control"
-                               required
-                        >
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-6">
-                            <div class="position-relative form-group">
-                                <label for="exampleCity" class="">City</label>
-                                <input name="city"
-                                       id="exampleCity"
-                                       type="text"
-                                       class="form-control"
-                                       required
-                                >
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="position-relative form-group">
-                                <label for="contact1" class="">Contact number 1</label>
-                                <input
-                                        name="contact"
-                                        id="contact1"
-                                        type="text"
-                                        class="form-control"
-                                        required
-                                >
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="position-relative form-group">
-                                <label for="contact2" class="">Contact number 2 </label>
-                                <input
-                                        name="contact2"
-                                        id="contact2"
-                                        type="text"
-                                        class="form-control"
-                                        required
-                                >
-                            </div>
-                        </div>
-                        <div class="col-md-4 position-relative form-group">
-                            <label for="service" class="">Service</label>
-                            <select
-                                    name="service" id="service" class="form-control">
-                                <option>Installation</option>
-                                <option>Service/Repair</option>
-                            </select>
-                        </div>
-                        <div class="position-relative form-group col-md-8">
-                            <label for="problems" class="">Problem</label>
-                            <input
-                                    name="problem"
-                                    id="problems"
-                                    type="text"
-                                    class="form-control"
-                                    required
-                            >
-                        </div>
-                    </div>
+<div class="modal-header">
+    <h4 class="modal-title">Contact</h4>
+
+    <div class="col-sm-6" align="right">
+        <a href="/edit_contact/?id={{contact.id}}" class="btn btn-success" data-toggle="modal"><i
+                class="material-icons">&#xe578;</i>
+            <span>Edit/Update</span></a>
+    </div>
+</div>
+
+<div class="form-row">
+
+    <div class="col-md-6">
+        <div class="col-md-11">
+
+            <div class="position-relative form-group"><label class=""> Name</label>
+                <input
+                        name="name"
+                        placeholder="{{contact.name}}"
+                        class="form-control"
+                        value="{{contact.name}}"
+                        readonly
+                >
+            </div>
+
+            <div class="position-relative form-group">
+                <label class="">Gender</label>
+                <input
+                        name="gender"
+                        placeholder="{{contact.gender}}"
+                        value="{{contact.gender}}"
+                        readonly
+                        class="form-control"
+                        required
+                >
+            </div>
+            <div class="position-relative form-group"><label class="">Address</label>
+                <input
+                        name="address"
+                        placeholder="{{contact.address}}"
+                        value="{{contact.address}}"
+                        class="form-control"
+                        readonly
+                ><br>
+                <input
+                        name="city"
+                        placeholder="{{contact.city}}"
+                        value="{{contact.city}}"
+                        readonly
+
+                        class="form-control"><br>
+                <input
+                        name="state"
+                        placeholder="{{contact.state}}"
+                        value="{{contact.state}}"
+                        readonly
+
+
+                        class="form-control"><br>
+                <input
+                        name="country"
+                        placeholder="{{contact.country}}"
+                        value="{{contact.country}}"
+                        readonly
+                        class="form-control">
+            </div>
+            <div class="position-relative form-group"><label class="">Tax ID/ Pan No</label>
+                <input
+                        name="pan_no"
+                        placeholder="{{contact.pan_number}}"
+                        value="{{contact.pan_number}}"
+                        readonly
+                        class="form-control">
 
             </div>
         </div>
     </div>
+
+    <div class="col-md-6">
+        <div class="col-md-11">
+            <div class="position-relative form-group"><label class="">Job position</label>
+                <input
+                        name="job_position"
+                        placeholder="{{contact.job_position}}"
+                        value="{{contact.job_position}}"
+                        readonly
+                        class="form-control">
+            </div>
+            <div class="position-relative form-group"><label class="">Phone Number</label>
+                <input
+                        name="phone_number"
+                        placeholder="{{contact.phone_number}}"
+                        value="{{contact.phone_number}}"
+                        readonly
+                        class="form-control"
+                        required
+                >
+            </div>
+            <div class="position-relative form-group"><label class="">Mobile Number</label>
+                <input
+                        name="mobile_number"
+                        placeholder="{{contact.mobile_number}}"
+                        readonly
+                        value="{{contact.mobile_number}}"
+                        class="form-control">
+
+            </div>
+            <div class="position-relative form-group"><label class="">Email</label>
+                <input
+                        name="email"
+                        placeholder="{{contact.email}}"
+                        readonly
+                        value="{{contact.email}}"
+                        type="email"
+                        class="form-control">
+            </div>
+            <div class="position-relative form-group"><label class="">WebSite</label>
+                <input
+                        name="website"
+                        placeholder="{{contact.website}}"
+                        value="{{contact.website}}"
+                        readonly
+                        class="form-control">
+            </div>
+            <div class="position-relative form-group"><label class="">Tag</label>
+                <input
+                        name="tag"
+                        placeholder="{{contact.tag}}"
+                        value="{{contact.tag}}"
+                        readonly
+                        class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3">Image :   </label>
+        <div class="col-12 col-sm-6 col-md-3 px-0">
+            <img src={{contact.image.url}}
+                 alt="{{contact.name}}" class="rounded-circle mx-auto d-block img-fluid">
+        </div>
+    </div>
 </div>
+
+
+
+
 
 {% endblock %}

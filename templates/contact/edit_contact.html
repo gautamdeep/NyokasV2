@@ -6,10 +6,10 @@
 <!--add new item categories-->
 
 
-<form action="/contact_list/" method="POST" enctype="multipart/form-data">
+<form action="/update_contact/?id={{id}}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="modal-header">
-        <h4 class="modal-title">Add new contact</h4>
+        <h4 class="modal-title">Edit contact</h4>
     </div>
 
     <div class="form-row">
@@ -20,16 +20,20 @@
                 <div class="position-relative form-group"><label class=""> Name</label>
                     <input
                             name="name"
-                            placeholder="Name"
+                            placeholder="{{contact.name}}"
                             class="form-control"
-                            required
+                          value="{{contact.name}}"
                     >
                 </div>
 
                 <div class="position-relative form-group">
                     <label class="">Gender</label>
                     <select
-                            name="gender" class="form-control">
+                            name="gender"
+                            class="form-control"
+
+
+                    >
                         <option>Male</option>
                         <option>Female</option>
                         <option>Other</option>
@@ -38,25 +42,30 @@
                 <div class="position-relative form-group"><label class="">Address</label>
                     <input
                             name="address"
-                            placeholder="Address"
+                            placeholder="{{contact.address}}"
+                             value="{{contact.address}}"
                             class="form-control"><br>
                     <input
                             name="city"
-                            placeholder="City"
+                            placeholder="{{contact.city}}"
+                             value="{{contact.city}}"
                             class="form-control"><br>
                     <input
                             name="state"
-                            placeholder="State"
+                            placeholder="{{contact.state}}"
+                             value="{{contact.state}}"
                             class="form-control"><br>
                     <input
                             name="country"
-                            placeholder="Country"
+                            placeholder="{{contact.country}}"
+                             value="{{contact.country}}"
                             class="form-control">
                 </div>
                 <div class="position-relative form-group"><label class="">Tax ID/ Pan No</label>
                     <input
                             name="pan_no"
-                            placeholder="Pan Number"
+                            placeholder="{{contact.pan_number}}"
+                             value="{{contact.pan_number}}"
                             class="form-control">
                 </div>
             </div>
@@ -67,13 +76,15 @@
                 <div class="position-relative form-group"><label class="">Job position</label>
                     <input
                             name="job_position"
-                            placeholder="job_position"
+                            placeholder="{{contact.job_position}}"
+                             value="{{contact.job_position}}"
                             class="form-control">
                 </div>
                 <div class="position-relative form-group"><label class="">Phone Number</label>
                     <input
                             name="phone_number"
-                            placeholder="phone_number"
+                            placeholder="{{contact.phone_number}}"
+                             value="{{contact.phone_number}}"
                             class="form-control"
                             required
                     >
@@ -81,28 +92,32 @@
                 <div class="position-relative form-group"><label class="">Mobile Number</label>
                     <input
                             name="mobile_number"
-                            placeholder="mobile number"
+                            placeholder="{{contact.mobile_number}}"
+                             value="{{contact.mobile_number}}"
                             class="form-control">
 
                 </div>
                 <div class="position-relative form-group"><label class="">Email</label>
                     <input
                             name="email"
-                            placeholder="Email"
+                            placeholder="{{contact.email}}"
+                            value="{{contact.email}}"
                             type="email"
-                            required
+
                             class="form-control">
                 </div>
                 <div class="position-relative form-group"><label class="">WebSite</label>
                     <input
                             name="website"
-                            placeholder="Website"
+                            placeholder="{{contact.website}}"
+                             value="{{contact.website}}"
                             class="form-control">
                 </div>
                 <div class="position-relative form-group"><label class="">Tag</label>
                     <input
                             name="tag"
-                            placeholder="Tags"
+                            placeholder="{{contact.tag}}"
+                            value="{{contact.tag}}"
                             class="form-control">
                 </div>
             </div>
@@ -119,7 +134,7 @@
 
     <div class="" align="left">
         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-        <input type="submit" class="btn btn-success" value="Add">
+        <input type="submit" class="btn btn-success" value="Update">
     </div>
 </form>
 

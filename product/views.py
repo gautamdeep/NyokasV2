@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Vendor, Purchase_order
+from contact.models import Contact
 
 
 # Create your views here.
@@ -22,6 +23,23 @@ def vendor(request):
         vendor.pan_no = request.POST.get('pan_no')
         vendor.website = request.POST.get('website')
         vendor.tag = request.POST.get('tag')
+
+        contact = Contact()
+        contact.name = request.POST.get('vendor_name')
+
+        contact.address = request.POST.get('address')
+        contact.city = request.POST.get('city')
+        contact.state = request.POST.get('state')
+        contact.country = request.POST.get('country')
+        contact.phone_number = request.POST.get('phone_number')
+        contact.mobile_number = request.POST.get('mobile1')
+        contact.email = request.POST.get('email')
+        contact.pan_no = request.POST.get('pan_no')
+        contact.website = request.POST.get('website')
+        contact.tag = request.POST.get('tag')
+
+        contact.save()
+
 
         vendor.save()
         return render(request, 'product/vendor/vendor.html', context)
